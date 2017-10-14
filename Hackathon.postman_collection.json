@@ -1,0 +1,693 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hackathon",
+		"_postman_id": "d3c69ca8-ae7a-9620-185c-ad0b12131885",
+		"description": "Here are the various SITA Day of Travel Services APIs.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Airports info - get distance between airports",
+			"request": {
+				"url": "https://airport-qa.api.aero/airport/v2/distance/DUB/MIA?units=km",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-apiKey",
+						"value": "3035d833bb6e531654a3cce03e6b1fde",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "/distance/{from}/{to}"
+			},
+			"response": []
+		},
+		{
+			"name": "Airport info by CODE ",
+			"request": {
+				"url": "https://airport-qa.api.aero/airport/v2/airport/MIA",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-apiKey",
+						"value": "3035d833bb6e531654a3cce03e6b1fde",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "This operation returns information about the given airport code. The code must be the 3\\4 letter IATA\\ICAO code."
+			},
+			"response": []
+		},
+		{
+			"name": "Airport info match",
+			"request": {
+				"url": "https://airport-qa.api.aero/airport/v2/match/MIA",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-apiKey",
+						"value": "3035d833bb6e531654a3cce03e6b1fde",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "{{baseUrl}}/airport/v2/match/AS?user_key=e04e12d1f35fc00f10c986c7c10fa536"
+			},
+			"response": []
+		},
+		{
+			"name": "BagTag issue tag",
+			"request": {
+				"url": "http://devbagtag.us-east-1.elasticbeanstalk.com/bagtag/v1/issue?channel=BAG",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					},
+					{
+						"key": "X-apiKey",
+						"value": "6c4564f89d51e4a5cc526c820d39c256",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request languageCode=\"en\">\r\n   <flightDetails departDate=\"YYYYMMDD\" departHHMM=\"19:10\" arriveHHMM=\"20:30\" departure=\"DUB\" arrival=\"IST\" flightNumber=\"212\">\r\n                <leg depAirportCode=\"DUB\" arrAirportCode=\"LHR\" flightNumber=\"123\"/>\r\n                <leg depAirportCode=\"LHR\" arrAirportCode=\"GVA\" flightNumber=\"345\"/>\r\n                <leg depAirportCode=\"NYC\" arrAirportCode=\"IST\" flightNumber=\"678\"/>\r\n   </flightDetails>\r\n   <bagTags>\r\n   <bagTag bookingRef=\"PNR1253\" boardingNumber=\"OutOfScope\" passengerItineraryID=\"Optional\">\r\n                   <passengers>\r\n                                <passenger>\r\n                                                <bagIdentifiers>\r\n                                                               <bagIdentifier LPN=\"\"  uniqueData=\"????\"/>\r\n                                                               <bagIdentifier LPN=\"\"  uniqueData=\"????\"/>\r\n                                                </bagIdentifiers>\r\n                                                <firstName>TEST</firstName>\r\n                                                <lastName>TESTER</lastName>\r\n                                                <title>MR</title>\r\n                                                <address>\r\n                                                                <name>Optional</name>\r\n                                                                <street>Optional</street>\r\n                                                                <city>Optional</city>\r\n                                                                <state>Optional</state>\r\n                                                                <country>Optional</country>\r\n                                                </address>\r\n                                </passenger>\r\n                   </passengers>\r\n    </bagTag>\r\n    </bagTags>\r\n</request>"
+				},
+				"description": "Issue a printable bag tag for a passenger."
+			},
+			"response": []
+		},
+		{
+			"name": "Beacons - Get all Beacons for an airport",
+			"request": {
+				"url": "https://cube.api.aero/atibeacon/beacons/1?airportCode=JFK&preservePendingNewBeacons=true&ignoreCache=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "cedf92f7a02fd4e8cb585ba7477d9b19",
+						"description": ""
+					},
+					{
+						"key": "x-appId",
+						"value": "e719dcad",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "{{baseUrl}}/atibeacon/beacons/1?airportCode=MIA&preservePendingNewBeacons=true&ignoreCache=true"
+			},
+			"response": [
+				{
+					"id": "b7bdb592-2f1f-4646-be9e-7a033cf85b69",
+					"name": "ord_key.txt",
+					"originalRequest": {
+						"url": "{{baseUrl}}/atibeacon/beacons/1?airportCode=ORD",
+						"method": "GET",
+						"header": [
+							{
+								"key": "//x-apiKey",
+								"value": "a5eaa885ac1c5b96999679f8e5cb9af9",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "//x-appId",
+								"value": "fe56f70a",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "x-appid",
+								"value": "a0d001ee",
+								"description": ""
+							},
+							{
+								"key": "x-apiKey",
+								"value": "44de7bf3fd8bbc4649300629ef07e1d4",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "{{baseUrl}}/atibeacon/beacons/1?airportCode=MIA&preservePendingNewBeacons=true"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1561",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 05 Oct 2015 09:44:11 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding,User-Agent",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": "967",
+					"body": "[{\"name\":\"B16\",\"beaconType\":\"Gate\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1200,\"minorId\":12,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:17:54.000Z\",\"radius\":1,\"latitude\":41.98151247606579,\"longitude\":-87.90637648198754,\"idBeacon\":7762,\"modelName\":null,\"macAddress\":\"F4:CE:D9:85:CA:4A\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T20:13:55.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:17:54.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"326\",\"brandName\":\"StickNFind\",\"batteryPercent\":70,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":21.0,\"temperatureLastUpdated\":\"2015-09-30T21:17:54.000Z\",\"lastObserved\":\"2015-09-30T21:17:54.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"6\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1119,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:41.000Z\",\"radius\":4,\"latitude\":41.978724,\"longitude\":-87.90659699999999,\"idBeacon\":827,\"modelName\":null,\"macAddress\":\"DF:C0:34:75:16:43\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T22:16:41.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":92,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":27.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"5\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1218,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:56.000Z\",\"radius\":4,\"latitude\":41.978606,\"longitude\":-87.906672,\"idBeacon\":828,\"modelName\":null,\"macAddress\":\"FA:69:BA:38:B8:59\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T22:16:56.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":88,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":29.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 3\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":136,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:25:13.000Z\",\"radius\":4,\"latitude\":41.977956,\"longitude\":-87.906641,\"idBeacon\":823,\"modelName\":null,\"macAddress\":\"E1:CA:1A:CA:D0:59\",\"power\":-20.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:25:13.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"330\",\"brandName\":\"StickNFind\",\"batteryPercent\":86,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":25.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 2\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1072,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-02-19T18:43:11.000Z\",\"radius\":4,\"latitude\":41.97808720101337,\"longitude\":-87.90662035346031,\"idBeacon\":822,\"modelName\":null,\"macAddress\":\"C6:8D:A3:09:AC:17\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:25:02.000Z\",\"batteryPercentLastChecked\":\"2015-02-19T18:43:11.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":57,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":34.0,\"temperatureLastUpdated\":\"2015-02-19T18:43:11.000Z\",\"lastObserved\":\"2015-02-19T18:43:11.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Lounge 4\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1074,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:33:12.000Z\",\"radius\":1,\"latitude\":41.97794363601908,\"longitude\":-87.90679972618818,\"idBeacon\":824,\"modelName\":null,\"macAddress\":\"F0:CB:17:90:4A:79\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:33:12.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":86,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":26.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 1\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1077,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-09T18:23:09.000Z\",\"radius\":4,\"latitude\":41.97819811471969,\"longitude\":-87.90660694241524,\"idBeacon\":821,\"modelName\":null,\"macAddress\":\"D3:CD:1D:B0:C8:F3\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:24:44.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":92,\"publicBeacon\":false,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":26.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"1G Entrance\",\"beaconType\":\"EntryExit\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1800,\"minorId\":163,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-23T15:23:55.000Z\",\"radius\":30,\"latitude\":41.97803211795488,\"longitude\":-87.90645841509104,\"idBeacon\":815,\"modelName\":null,\"macAddress\":\"F4:B4:64:E1:EC:A8\",\"power\":-8.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-09T15:05:56.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"332\",\"brandName\":\"StickNFind\",\"batteryPercent\":94,\"publicBeacon\":false,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":29.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-1_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":10,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":1,\"latitude\":41.98147309754072,\"longitude\":-87.90661207633093,\"idBeacon\":7759,\"modelName\":null,\"macAddress\":\"D9:06:B5:61:D3:C9\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T15:29:50.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:03:46.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":60,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":22.0,\"temperatureLastUpdated\":\"2015-09-30T21:03:46.000Z\",\"lastObserved\":\"2015-09-30T21:03:46.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-2_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":11,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":1,\"latitude\":41.981560826879736,\"longitude\":-87.90668986039236,\"idBeacon\":7761,\"modelName\":null,\"macAddress\":\"C6:9D:5D:03:CA:C0\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T15:31:50.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:03:46.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":58,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":24.0,\"temperatureLastUpdated\":\"2015-09-30T21:03:46.000Z\",\"lastObserved\":\"2015-09-30T21:03:46.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-1_Jetbridge_outside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":13,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-10-01T14:23:22.000Z\",\"radius\":0,\"latitude\":41.981497023736075,\"longitude\":-87.90656781988218,\"idBeacon\":7763,\"modelName\":null,\"macAddress\":\"XX:XX:XX:XX:XX.01\",\"power\":null,\"advertisingInterval\":null,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T19:57:59.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T18:42:56.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":null,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorIdPending\":2100,\"minorIdPending\":13,\"powerPending\":-40.0,\"advertisingIntervalPending\":100.0,\"temperature\":null,\"temperatureLastUpdated\":null,\"lastObserved\":\"2015-09-30T19:57:59.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null}]"
+				},
+				{
+					"id": "f59ec030-1d1f-4c18-8ac7-9b0c0f25c487",
+					"name": "ex_key.txt",
+					"originalRequest": {
+						"url": "{{baseUrl}}/atibeacon/beacons/1?airportCode=ORD",
+						"method": "GET",
+						"header": [
+							{
+								"key": "//x-apiKey",
+								"value": "a5eaa885ac1c5b96999679f8e5cb9af9",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "//x-appId",
+								"value": "fe56f70a",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "x-appid",
+								"value": "867b04d8",
+								"description": ""
+							},
+							{
+								"key": "x-apiKey",
+								"value": "142efa0cd60fe8d6303412c1fa2392d6",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "{{baseUrl}}/atibeacon/beacons/1?airportCode=MIA&preservePendingNewBeacons=true"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "596",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 05 Oct 2015 09:39:32 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding,User-Agent",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": "577",
+					"body": "[{\"name\":\"B16\",\"beaconType\":\"Gate\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1200,\"minorId\":12,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:17:54.000Z\",\"radius\":0,\"latitude\":41.98151247606579,\"longitude\":-87.90637648198754},{\"name\":\"6\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1119,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:41.000Z\",\"radius\":0,\"latitude\":41.978724,\"longitude\":-87.90659699999999},{\"name\":\"5\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1218,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:56.000Z\",\"radius\":0,\"latitude\":41.978606,\"longitude\":-87.906672},{\"name\":\"Inside Lounge 3\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":136,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:25:13.000Z\",\"radius\":0,\"latitude\":41.977956,\"longitude\":-87.906641},{\"name\":\"Inside Lounge 2\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1072,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-02-19T18:43:11.000Z\",\"radius\":0,\"latitude\":41.97808720101337,\"longitude\":-87.90662035346031},{\"name\":\"Lounge 4\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1074,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:33:12.000Z\",\"radius\":0,\"latitude\":41.97794363601908,\"longitude\":-87.90679972618818},{\"name\":\"B16-1_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":10,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":0,\"latitude\":41.98147309754072,\"longitude\":-87.90661207633093},{\"name\":\"B16-2_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":11,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":0,\"latitude\":41.981560826879736,\"longitude\":-87.90668986039236},{\"name\":\"B16-1_Jetbridge_outside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":13,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-10-01T14:23:22.000Z\",\"radius\":0,\"latitude\":41.981497023736075,\"longitude\":-87.90656781988218}]"
+				},
+				{
+					"id": "294dfe25-558e-4d51-b05b-79afb69f15c5",
+					"name": "ord_presv.txt",
+					"originalRequest": {
+						"url": "{{baseUrl}}/atibeacon/beacons/1?airportCode=ORD&preservePendingNewBeacons=true",
+						"method": "GET",
+						"header": [
+							{
+								"key": "//x-apiKey",
+								"value": "a5eaa885ac1c5b96999679f8e5cb9af9",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "//x-appId",
+								"value": "fe56f70a",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "x-appid",
+								"value": "a0d001ee",
+								"description": ""
+							},
+							{
+								"key": "x-apiKey",
+								"value": "44de7bf3fd8bbc4649300629ef07e1d4",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "{{baseUrl}}/atibeacon/beacons/1?airportCode=MIA&preservePendingNewBeacons=true"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1807",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 05 Oct 2015 09:46:02 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding,User-Agent",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": "475",
+					"body": "[{\"name\":\"B16\",\"beaconType\":\"Gate\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1200,\"minorId\":12,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:17:54.000Z\",\"radius\":1,\"latitude\":41.98151247606579,\"longitude\":-87.90637648198754,\"idBeacon\":7762,\"modelName\":null,\"macAddress\":\"F4:CE:D9:85:CA:4A\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T20:13:55.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:17:54.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"326\",\"brandName\":\"StickNFind\",\"batteryPercent\":70,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":21.0,\"temperatureLastUpdated\":\"2015-09-30T21:17:54.000Z\",\"lastObserved\":\"2015-09-30T21:17:54.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"6\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1119,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:41.000Z\",\"radius\":4,\"latitude\":41.978724,\"longitude\":-87.90659699999999,\"idBeacon\":827,\"modelName\":null,\"macAddress\":\"DF:C0:34:75:16:43\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T22:16:41.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":92,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":27.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"5\",\"beaconType\":\"BaggageHall\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1400,\"minorId\":1218,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":1,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T22:16:56.000Z\",\"radius\":4,\"latitude\":41.978606,\"longitude\":-87.906672,\"idBeacon\":828,\"modelName\":null,\"macAddress\":\"FA:69:BA:38:B8:59\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T22:16:56.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":88,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":29.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"GS Entrance\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":17,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-03-04T21:41:16.000Z\",\"radius\":0,\"latitude\":41.97808445932382,\"longitude\":-87.9066191171296,\"idBeacon\":2094,\"modelName\":null,\"macAddress\":\"newBeaconPending2d110b37-f0f2-4178-8bbf-b6a4bd682dff\",\"power\":null,\"advertisingInterval\":null,\"statusAlert\":true,\"dateAdded\":\"2015-03-04T21:41:16.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":null,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorIdPending\":1500,\"minorIdPending\":17,\"powerPending\":-8.0,\"advertisingIntervalPending\":200.0,\"temperature\":null,\"temperatureLastUpdated\":null,\"lastObserved\":\"2015-03-04T21:41:16.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 3\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":136,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:25:13.000Z\",\"radius\":4,\"latitude\":41.977956,\"longitude\":-87.906641,\"idBeacon\":823,\"modelName\":null,\"macAddress\":\"E1:CA:1A:CA:D0:59\",\"power\":-20.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:25:13.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"330\",\"brandName\":\"StickNFind\",\"batteryPercent\":86,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":25.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 2\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1072,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-02-19T18:43:11.000Z\",\"radius\":4,\"latitude\":41.97808720101337,\"longitude\":-87.90662035346031,\"idBeacon\":822,\"modelName\":null,\"macAddress\":\"C6:8D:A3:09:AC:17\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:25:02.000Z\",\"batteryPercentLastChecked\":\"2015-02-19T18:43:11.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":57,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":34.0,\"temperatureLastUpdated\":\"2015-02-19T18:43:11.000Z\",\"lastObserved\":\"2015-02-19T18:43:11.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Lounge 4\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1074,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-07T21:33:12.000Z\",\"radius\":1,\"latitude\":41.97794363601908,\"longitude\":-87.90679972618818,\"idBeacon\":824,\"modelName\":null,\"macAddress\":\"F0:CB:17:90:4A:79\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:33:12.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":86,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":26.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Inside Lounge 1\",\"beaconType\":\"Lounge\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1500,\"minorId\":1077,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":3,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-09T18:23:09.000Z\",\"radius\":4,\"latitude\":41.97819811471969,\"longitude\":-87.90660694241524,\"idBeacon\":821,\"modelName\":null,\"macAddress\":\"D3:CD:1D:B0:C8:F3\",\"power\":-20.0,\"advertisingInterval\":200.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-07T21:24:44.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":92,\"publicBeacon\":false,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":26.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"Security Exit\",\"beaconType\":\"SecurityZone\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1600,\"minorId\":19,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":2,\"airside\":true,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-03-04T21:44:05.000Z\",\"radius\":0,\"latitude\":41.97762086284486,\"longitude\":-87.90701541351154,\"idBeacon\":2099,\"modelName\":null,\"macAddress\":\"newBeaconPendingeaf3885d-4a3e-4dc4-b67b-2e424f3a438c\",\"power\":null,\"advertisingInterval\":null,\"statusAlert\":true,\"dateAdded\":\"2015-03-04T21:44:05.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":null,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorIdPending\":1600,\"minorIdPending\":19,\"powerPending\":-40.0,\"advertisingIntervalPending\":200.0,\"temperature\":null,\"temperatureLastUpdated\":null,\"lastObserved\":\"2015-03-04T21:44:05.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"1G Entrance\",\"beaconType\":\"EntryExit\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":1800,\"minorId\":163,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":null,\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2014-10-23T15:23:55.000Z\",\"radius\":30,\"latitude\":41.97803211795488,\"longitude\":-87.90645841509104,\"idBeacon\":815,\"modelName\":null,\"macAddress\":\"F4:B4:64:E1:EC:A8\",\"power\":-8.0,\"advertisingInterval\":100.0,\"statusAlert\":true,\"dateAdded\":\"2014-10-09T15:05:56.000Z\",\"batteryPercentLastChecked\":null,\"hardwareVersion\":null,\"softwareVersion\":\"332\",\"brandName\":\"StickNFind\",\"batteryPercent\":94,\"publicBeacon\":false,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":29.0,\"temperatureLastUpdated\":null,\"lastObserved\":null,\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-1_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":10,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":1,\"latitude\":41.98147309754072,\"longitude\":-87.90661207633093,\"idBeacon\":7759,\"modelName\":null,\"macAddress\":\"D9:06:B5:61:D3:C9\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T15:29:50.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:03:46.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":60,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":22.0,\"temperatureLastUpdated\":\"2015-09-30T21:03:46.000Z\",\"lastObserved\":\"2015-09-30T21:03:46.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-2_Jetbridge_Planeside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":11,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-09-30T21:03:46.000Z\",\"radius\":1,\"latitude\":41.981560826879736,\"longitude\":-87.90668986039236,\"idBeacon\":7761,\"modelName\":null,\"macAddress\":\"C6:9D:5D:03:CA:C0\",\"power\":-40.0,\"advertisingInterval\":100.0,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T15:31:50.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T21:03:46.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":58,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":null,\"majorIdPending\":null,\"minorIdPending\":null,\"powerPending\":null,\"advertisingIntervalPending\":null,\"temperature\":24.0,\"temperatureLastUpdated\":\"2015-09-30T21:03:46.000Z\",\"lastObserved\":\"2015-09-30T21:03:46.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null},{\"name\":\"B16-1_Jetbridge_outside\",\"beaconType\":\"Other\",\"uuid\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorId\":2100,\"minorId\":13,\"location\":\"ORD\",\"terminal\":\"1\",\"concourse\":\"B\",\"floor\":2,\"airside\":false,\"metaData\":null,\"walkInfo\":null,\"lastUpdate\":\"2015-10-01T14:23:22.000Z\",\"radius\":0,\"latitude\":41.981497023736075,\"longitude\":-87.90656781988218,\"idBeacon\":7763,\"modelName\":null,\"macAddress\":\"XX:XX:XX:XX:XX.01\",\"power\":null,\"advertisingInterval\":null,\"statusAlert\":false,\"dateAdded\":\"2015-09-30T19:57:59.000Z\",\"batteryPercentLastChecked\":\"2015-09-30T18:42:56.000Z\",\"hardwareVersion\":null,\"softwareVersion\":\"312\",\"brandName\":\"StickNFind\",\"batteryPercent\":null,\"publicBeacon\":true,\"organisation\":{\"idOrganisation\":15,\"systemName\":\"UA\",\"descriptiveName\":\"United Airlines\",\"airportOperator\":true,\"managedAirports\":\"EWR,ORD\",\"shareBeaconsWith\":null,\"name\":\"United Airlines\"},\"uuidPending\":\"D3FBDBE3-E95B-41A4-8B73-8A02FEB257BA\",\"majorIdPending\":2100,\"minorIdPending\":13,\"powerPending\":-40.0,\"advertisingIntervalPending\":100.0,\"temperature\":null,\"temperatureLastUpdated\":null,\"lastObserved\":\"2015-09-30T19:57:59.000Z\",\"scanLastObserved\":false,\"hoursWithoutObservationThreshold\":null}]"
+				}
+			]
+		},
+		{
+			"name": "Beacons - Get info for a Beacon",
+			"request": {
+				"url": "https://cube.api.aero/atibeacon/beacons/1/SITA_XS/5C3F2F21-20D1-11E6-A9BB-06481FD16E71/1600/604",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-appId",
+						"value": "e719dcad",
+						"description": ""
+					},
+					{
+						"key": "x-apiKey",
+						"value": "cedf92f7a02fd4e8cb585ba7477d9b19",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boarding Pass - Update Pass Data",
+			"request": {
+				"url": "http://dev2dbp.api.aero/api/14?channel=API",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					},
+					{
+						"key": "X-apiKey",
+						"value": "6de21d7605afb9c319d97309d968e9a7",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<Request type=\"reissue\" id=\"50\" LanguageCode=\"en\" emailAddress=\"your email \" mobileNumber=\"+4477.....\" gate=\"212\" boardingHHMM=\"18:40\" departHHMM=\"19:10\" arriveHHMM=\"20:30\" ffMiles=\"\" DepartTerminal=\"Term 2\" ffTier=\"\" message=\"Sample\" CabinName=\"Economy\" > <Barcode firstName=\"TEST\" lastName=\"TESTER\" title=\"MR\" formatCode=\"M\" passengerDescription=\"1\" sourceOfCheckIn=\"M\" sourceOfBoardingPass=\"M\" documentType=\"B\" airlineDesignator=\"14\" baggageTagNumber=\"85123456003\" ><Legs><Leg bookingRef=\"P12345\" depAirportCode=\"DUB\" arrAirportCode=\"LHR\" carrier=\"14\" flightNumber=\"603\" depDate=\"2017-05-20\" classCode=\"Y\" seatNumber=\"33A\" seqNumber=\"2\" passengerStatus=\"1\" airlineNumericCode=\"14\" ticketNumber=\"2300293153\" selecteeIndicator=\"0\" internationalDocVerification=\"1\" marketingCarrier=\"14\" ffAirline=\"14\" ffNumber=\"123456789\" IdAdIndicator=\"0\" freeBaggageAllowance=\"2PC\" airlineUseData=\"\"> </Leg></Legs> </Barcode> <Parameters> <Parameter name=\"BagStatus\">Loaded </Parameter> </Parameters> </Request>"
+				},
+				"description": "Boarding pass api call to update fields on the boarding pass.  You can change gate, times, seat, bag status, etc."
+			},
+			"response": [
+				{
+					"id": "ae5d0cd7-c10f-4801-9621-3def52262d77",
+					"name": "bagjourney",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1408",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=iso-8859-1",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 20 Apr 2017 16:10:11 GMT",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": 2566,
+					"body": "{\"success\":true,\"bag\":{\"bagtag\":\"0120774501\",\"passenger_first_name\":\"JOHNMR\",\"passenger_last_name\":\"SMITH\"},\"events\":[{\"airport\":\"ATL\",\"event_code\":\"CHECKED_IN\",\"event_desc\":\"Bag Checked-in\",\"flight_info\":{\"outbound\":{\"date\":\"18APR\",\"dest_airport\":\"FRA\",\"flight\":\"0111\",\"airline\":\"UA\"}},\"frequent_flyer\":\"BD662503\",\"local_date_time\":\"2017-04-18T18:14:02.507-04:00\",\"utc_date_time\":\"2017-04-18T22:14:02.507Z\",\"passenger_status\":\"C\",\"pnr\":\"8YS7CC\"},{\"airport\":\"ATL\",\"event_code\":\"SORTED\",\"event_desc\":\"Bag Sorted\",\"local_date_time\":\"2017-04-18T18:14:02.636-04:00\",\"utc_date_time\":\"2017-04-18T22:14:02.636Z\"},{\"airport\":\"ATL\",\"event_code\":\"LOADED_INTO_CONTAINER\",\"event_desc\":\"Bag Loaded into Container\",\"flight_loading_info\":{\"dest_airport\":\"FRA\",\"date\":\"18APR\",\"flight\":\"0111\",\"airline\":\"UA\"},\"connection_flight_info\":{},\"local_date_time\":\"2017-04-18T18:14:02.743-04:00\",\"utc_date_time\":\"2017-04-18T22:14:02.743Z\",\"read_location\":\"DCQW\",\"sent_location\":\"T0TH\",\"stowage_device\":\"AKE12345UA\"},{\"aircraft_compartment\":\"23\",\"airport\":\"ATL\",\"event_code\":\"CONT_LOADED_ON_AIRCRAFT\",\"event_desc\":\"Container Loaded on Aircraft\",\"flight_loading_info\":{\"dest_airport\":\"FRA\",\"date\":\"18APR\",\"flight\":\"0111\",\"airline\":\"UA\"},\"connection_flight_info\":{},\"local_date_time\":\"2017-04-18T18:14:02.743-04:00\",\"utc_date_time\":\"2017-04-18T22:14:02.743Z\",\"read_location\":\"DCQW\",\"sent_location\":\"T0TH\",\"stowage_device\":\"AKE12345UA\"}]}"
+				}
+			]
+		},
+		{
+			"name": "Boarding Pass - Issue Pass",
+			"request": {
+				"url": "http://dev2dbp.api.aero/api/14?channel=API",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					},
+					{
+						"key": "X-apiKey",
+						"value": "615656c7eef678e5a3c0e13382159557",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <Request LanguageCode=\"en\" emailAddress=\"youremail.com\" mobileNumber=\"+intlnumber\" gate=\"212\" boardingHHMM=\"18:40\" departHHMM=\"19:10\" arriveHHMM=\"20:30\" ffMiles=\"\" DepartTerminal=\"Term 2\" ffTier=\"\" message=\"Sample\" CabinName=\"Economy\" > <Barcode firstName=\"TEST\" lastName=\"TESTER\" title=\"MR\" formatCode=\"M\" passengerDescription=\"1\" sourceOfCheckIn=\"M\" sourceOfBoardingPass=\"M\" documentType=\"B\" airlineDesignator=\"14\" baggageTagNumber=\"85123456003\" ><Legs><Leg bookingRef=\"P12345\" depAirportCode=\"DUB\" arrAirportCode=\"LHR\" carrier=\"14\" flightNumber=\"603\" depDate=\"2017-05-20\" classCode=\"Y\" seatNumber=\"2A\" seqNumber=\"2\" passengerStatus=\"1\" airlineNumericCode=\"14\" ticketNumber=\"2300293153\" selecteeIndicator=\"0\" internationalDocVerification=\"1\" marketingCarrier=\"14\" ffAirline=\"14\" ffNumber=\"123456789\" IdAdIndicator=\"0\" freeBaggageAllowance=\"2PC\" airlineUseData=\"\"> </Leg></Legs> </Barcode> <Parameters><Parameter name=\"BagStatus\">Checked </Parameter> </Parameters> </Request>"
+				},
+				"description": "Issue a mobile boarding pass for airline '14' to be delivered to passenger's mobile phone."
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Follower",
+			"request": {
+				"url": "https://flightfollower-qa.api.aero/flightfollower/v1/MIA/DFW/AA/281?imgWidth=300&imgLength=300&imgType=gif&rfc2397=false&base64=false",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "84d718b8a9bd60d1bfe79122d3770870",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "curl -k -X GET -H \"X-apiKey: f9dc043c3425f44cc779052e3003f767\" \"https://<env>/flightfollower/GRU/MIA/UA/1?imgWidth=100&imgLength=100&imgType=gif&rfc2397=true&base64=false\"\n\nhttps://flightfollower-qa.api.aero/flightfollower/v1/MIA/DFW/AA/281?imgWidth=500&imgLength=500&imgType=gif&rfc2397=true&base64=true"
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Info Get Flights Dep 4+ hours",
+			"request": {
+				"url": "https://flifo-qa.api.aero/flifo/v3/flights/MIA/d?futureWindow=4",
+				"method": "GET",
+				"header": [
+					{
+						"key": "//x-apiKey",
+						"value": "2cfd0827f82ceaccae7882938b4b1627",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": "\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Info Get Flights Arr 4+ hours",
+			"request": {
+				"url": "https://flifo-qa.api.aero/flifo/v3/flights/MIA/a?futureWindow=4",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "2cfd0827f82ceaccae7882938b4b1627",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "size",
+							"value": "original",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Info Get Flights Arr for Airline",
+			"request": {
+				"url": "https://flifo-qa.api.aero/flifo/v3/flights/MIA/L7/a?futureWindow=2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "2cfd0827f82ceaccae7882938b4b1627",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "size",
+							"value": "original",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Get flights arriving at an airport for a particular airline."
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Info Get Flight Record for Arr flight",
+			"request": {
+				"url": "https://flifo-qa.api.aero/flifo/v3/flight/MIA/GB/2230/a",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "2cfd0827f82ceaccae7882938b4b1627",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "size",
+							"value": "original",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Need to supply airport code, airline and flight number"
+			},
+			"response": []
+		},
+		{
+			"name": "NameMatch",
+			"request": {
+				"url": "http://namematchapidev.us-east-1.elasticbeanstalk.com/GroundServices/namematch/v3/match/XS?bpName=\"Smith/AllisonMs\"&mrzName=\"SMITH<<ALLISON<JONES\"&trace=false&ruleset=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "d795ed7104f6374bfb347ad9603ccbd4",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "API to compare boarding pass name with passport name."
+			},
+			"response": []
+		},
+		{
+			"name": "Waittime - Current wait",
+			"request": {
+				"url": "https://waittime-qa.api.aero/waittime/v1/current/DXB",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "8e2cff00ff9c6b3f448294736de5908a",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "curl -k -H \"Accept control-Request-Headers: Origin, Accept, Content-Type\" -H \"Accept: application/json\" -H \"X-apiKey: 7b4d5aabeb279c9da7d700f522a3c73f\" \"https://waittime-qa.api.aero/waittime/v1/projection/mco\""
+			},
+			"response": []
+		},
+		{
+			"name": "Weather - Current Search",
+			"request": {
+				"url": "https://weather-qa.api.aero/weather/v1/current/MIA?temperatureScale=F",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "89e15931434731aefdaa04920ec60e44",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "http://<env>/weatherapi/weather/v1/current/MIA"
+			},
+			"response": []
+		},
+		{
+			"name": "Weather forecast - temp and duration params",
+			"request": {
+				"url": "https://weather-qa.api.aero/weather/v1/forecast/MIA?duration=7&temperatureScale=F",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "89e15931434731aefdaa04920ec60e44",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "http://localhost:8080/weatherapi/weather/v1/forecast/MIA?temperatureScale=F&duration=7\""
+			},
+			"response": []
+		},
+		{
+			"name": "Weather - Combined Search with params",
+			"request": {
+				"url": "https://weather-qa.api.aero/weather/v1/combined/MIA?temperatureScale=F&duration=7&lengthUnit=K",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-apiKey",
+						"value": "89e15931434731aefdaa04920ec60e44",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
