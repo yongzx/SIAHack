@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { ScanTicketsPage } from '../scan/scan';
-import { ExplorePage } from '../explore/explore'
+import { ExplorePage } from '../explore/explore';
 import { VouchersPage } from '../vouchers/vouchers';
 
 
