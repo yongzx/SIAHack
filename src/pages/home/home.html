@@ -5,29 +5,22 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="assets/icon/logo.png" alt="your image" style="width:50%;height:40%;" align="middle">
   <div class="title">
     <h2>SIA Stopover Holiday</h2>
+  </div>
+  <div>
+    <img src="SIALogo.jpg" style="width:50px;height:25px;" align="middle" padding="100%">
   </div>
 
   <div class="body">
     <!-- INSERT QR CODE HERE -->
-      <button ion-button full icon-left (click)="scanCode()">
-        <ion-icon name="qr-scanner"></ion-icon>Scan Tickets</button>
-    
-      <ion-card *ngIf="scannedCode">
-        <ion-card-content>
-          Passenger Name: {{ scannedCode }}
-        </ion-card-content>
-      </ion-card>
+    <p>
+      INSERT QR HERE
+    </p>
   </div>
 
   <div class="body">
-    <button class="next">
-      <span>
-        <a>Proceed without Scanning</a>
-      </span>
-    </button>
+     <button class="next"><span><a>Proceed without Scanning</a></span></button>
   </div>
 
 </ion-content>
