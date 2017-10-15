@@ -8,6 +8,13 @@ page-home {
   padding-top: 5%;
 }
 
+img{
+    height: 70vh;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
 .body {
   float: left;
   width: 50%;
@@ -18,16 +25,6 @@ h2 {
   font-weight: 600;
   font-size: 80px;
 }
-
-/*
-#logo {
-  background-image:url("src\pages\home\Logo.png");
-  height: 30%;
-  width: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
 
 // BUTTON
 .next a {
