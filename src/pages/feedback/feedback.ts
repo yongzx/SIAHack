@@ -42,9 +42,9 @@ import { DupFeedbackPage } from '../dupfeedback/dupfeedback';
   <ion-label >Others</ion-label>
   <ion-textarea [(ngModel)]="feedback.others" name="others"></ion-textarea>
 </ion-item>
-<button ion-button type="submit" block  [navPush]="anotherPage">Submit</button>
+<button ion-button type="submit" block >Submit</button>
 </form>
-<button ion-button block>Refresh</button>
+<button ion-button block  [navPush]="anotherPage">Refresh</button>
 `
 
 })

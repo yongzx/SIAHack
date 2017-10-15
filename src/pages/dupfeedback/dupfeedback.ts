@@ -10,10 +10,6 @@ import { NavController } from 'ionic-angular';
   <h1 class="title">Feedback</h1>
   </div>      
 
-  <label class="input">
-  <div class = "submission">Thank you for submission</div>
-  </label>
-
   <label class="item item-input item-select">
   <div class="input-label">
     Are you satisfied with the Stopover holidays?
