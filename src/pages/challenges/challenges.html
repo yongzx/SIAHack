@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Challenges
+    </ion-title>
+    <ion-buttons end>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item>
+    <div><h2>Challenges for fun-loving adventurous spirits! Complete these challenges, posting pictures on either Facebook or Instagram with the hashtag <b>#SIAStopoverHoliday</b> and win KrisFlyer miles!</h2>
+    </div>
+    </ion-item>
+
+
+  <ion-list>
+
+  	<!-- Picture category tasks -->
+
+    <ion-list-header>
+      <h1>Snap a picture with...</h1>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>A Merlion</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>A local</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>The National Flower: Vanda Miss Joaquim</ion-label>
+      <ion-checkbox value="dark"></ion-checkbox>
+    </ion-item>
+
+    <!-- Food category tasks -->
+
+    <ion-list-header>
+      <h1>Munch on some...</h1>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Hainanese Chicken Rice</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>McDonald's McSpicy Burger</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Traditional Roti Prata</ion-label>
+      <ion-checkbox value="dark"></ion-checkbox>
+    </ion-item>
+
+    <!-- Bonus level challenges -->
+
+    <ion-list-header>
+      <h1>Take it to the next level!</h1>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Catch A Pokemon on Pokemon Go!</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Catch the Sunset on Mount Faber</ion-label>
+      <ion-checkbox color="dark"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Selfie with another SIA stopover passenger</ion-label>
+      <ion-checkbox value="dark"></ion-checkbox>
+    </ion-item>
+
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+
+  </ion-list>
+
+</ion-content>
