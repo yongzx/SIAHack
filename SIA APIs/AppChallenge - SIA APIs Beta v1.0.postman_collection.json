@@ -1,0 +1,361 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AppChallenge - SIA APIs Beta v1.1 Draft",
+		"_postman_id": "230d178a-ce47-cd58-fe1c-aa71512ebcd8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Krisflyer Getprofile",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/krisflyer/getprofile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"request\": {\n    \"krisflyerNumber\": \"8987011905\"\n  },\n  \"clientUUID\": \"<ChangeThis: AnyUniqueStringForYourTeam>\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSearch",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/flight/search",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"request\":{  \r\n      \"itineraryDetails\":[  \r\n         {  \r\n            \"originAirportCode\":\"SIN\",\r\n            \"destinationAirportCode\":\"FCO\",\r\n            \"departureDate\":\"2017-11-01\"\r\n         },\r\n         {  \r\n            \"originAirportCode\":\"FCO\",\r\n            \"destinationAirportCode\":\"SIN\",\r\n            \"departureDate\":\"2017-11-08\"\r\n         }\r\n      ],\r\n      \"cabinClass\":\"Y\",\r\n      \"adultCount\":1\r\n   }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetFare",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/flight/getfare",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\": \"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"request\":{  \r\n      \"recommendationDetails\":[  \r\n         {  \r\n            \"recommendationId\": 10,\r\n            \"flightIds\":[  \r\n               0,\r\n               0\r\n            ]\r\n         }\r\n      ]\r\n   },\r\n   \"sessionId\":\"<ChangeThis: Copy Value from the FlightSearch Response>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ExtendSession",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/misc/extendsession",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"sessionId\":\"<ChangeThis: Copy Value from the FlightSearch Response>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePNR",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/pnr/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"request\":{  \r\n      \"tripType\":\"R\",\r\n      \"travellerDetails\":[\r\n         {  \r\n            \"title\":\"Miss\",\r\n            \"firstName\":\"<ChangeThis: UseOnlyLettersYourTeamNameToAvoidConflicts>\",\r\n            \"emailAddress\":\"temp@sia.com\",\r\n            \"isLeadPax\":\"true\",\r\n            \"contactDetails\":[  \r\n               {  \r\n                  \"type\":\"MOBILE\",\r\n                  \"countryCode\":\"65\",\r\n                  \"number\":\"12345678\"\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   },\r\n   \"sessionId\":\"<ChangeThis: Copy Value from the FlightSearch Response>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmPNR",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/pnr/confirm",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"sessionId\":\"<ChangeThis: Copy Value from the FlightSearch Response>\",\r\n   \"request\":{  \r\n      \"pnr\":\"<ChangeThis: CopyValueFromCreatePNR-Response>\",\r\n      \"travellerDetails\":[  \r\n         {  \r\n            \"isLeadPassenger\":\"true\",\r\n            \"contactDetails\":[  \r\n               {  \r\n                  \"type\":\"mobile\",\r\n                  \"value\":\"12345678\"\r\n               },\r\n               {  \r\n                  \"type\":\"email\",\r\n                  \"value\":\"temp@sia.com\"\r\n               }\r\n            ],\r\n            \"title\":\"Miss\",\r\n            \"passengerID\":\"<ChangeThis: CopyValueFromCreatePNR-Response>\",\r\n            \"firstName\":\"<ChangeThis: CopyValueFromCreatePNR-Response>\"\r\n         }\r\n      ],\r\n      \"addressDetails\":{  \r\n         \"address\":\"indsdvasd\",\r\n         \"city\":\"Singapore\",\r\n         \"state\":\"\",\r\n         \"zipCode\":\"\",\r\n         \"countryCode\":\"IN\"\r\n      },\r\n      \"paymentDetails\":{  \r\n         \"payeeName\":\"SiaAppchallenge\",\r\n         \"accountNumber\":\"<ChangeThis: GenerateFromDummyGeneratorWebsite>\",\r\n         \"expiryDate\":\"1905\",\r\n         \"cvvNumber\":\"111\",\r\n         \"amount\":\"<ChangeThis: CopyValueFromGetFare-response->fareDetails->totalAmount>\",\r\n         \"currencyCode\":\"<ChangeThis: CopyValueFromGetFare-response->fareDetails->currency->code>\"\r\n      }\r\n   }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPNR",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/pnr/get",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"request\":{  \r\n      \"pnr\":\"RVA7GY\"\r\n   }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SeatMap",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/seat/getmap",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"request\": {\r\n\t\"pnr\":\"RVA7GY\",\r\n\t\"flightID\": \"1\",\r\n    \"airlineCode\": \"SQ\",\r\n    \"flightNumber\": \"366\",\r\n    \"origin\": \"SIN\",\r\n    \"destination\": \"FCO\",\r\n    \"departureDate\": \"2017-11-01T00:00\",\r\n    \"cabinClass\": \"Y\",\r\n    \"pointOfSales\": \"SIN\"\r\n  },\r\n  \"clientUUID\": \"<ChangeThis: AnyUniqueStringForYourTeam>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SelectSeat",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/seat/select",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n   \"request\":{  \r\n      \"pnr\":\"RVA7GY\",\r\n      \"passengerSeatInfo\":[ \r\n         {  \r\n            \"passengerID\":\"2\",\r\n            \"seatNumber\":\"79A\"\r\n         }\r\n      ],\r\n      \"flightID\":\"1\",\r\n      \"destination\":\"FCO\",\r\n      \"origin\":\"SIN\"\r\n   }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Passenger",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/checkin/getpassenger",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"request\": {\r\n     \"pnr\": \"RVA7GY\"\r\n  },\r\n  \"clientUUID\": \"<ChangeThis: AnyUniqueStringForYourTeam>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Passenger",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/checkin/updatepassenger",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request\": {\r\n    \t\"pnr\": \"RVA7GY\",\r\n        \"passengers\": [\r\n            {\r\n                \"passengerID\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n                \"firstName\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n                \"title\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n                \"gender\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n                \"regulatoryDocs\":[\r\n                {\r\n                    \"documentType\": \"passport\",\r\n                    \"expiryDate\": \"2050-01-08\",\r\n                    \"firstName\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n                    \"issuingCountryCode\": \"SGP\",\r\n                    \"nationalityCode\": \"SGP\",\r\n                    \"documentNumber\": \"A55555\"\r\n                }\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"clientUUID\": \"<ChangeThis: AnyUniqueStringForYourTeam>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Checkin",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/checkin/checkin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n  \"request\": {\r\n    \"flights\": [\r\n      {\r\n        \"flightIDs\": [\r\n          \"<ChangeThis: CopyValueFromGetPassenger-Flights>\"\r\n        ],\r\n        \"originAirport\": {\r\n          \"airportCode\": \"<ChangeThis: CopyValueFromGetPassenger-Flights>\",\r\n          \"airportTerminal\": \"<ChangeThis: CopyValueFromGetPassenger-Flights>\"\r\n        },\r\n        \"destinationAirport\": {\r\n          \"airportCode\": \"<ChangeThis: CopyValueFromGetPassenger-Flights>\",\r\n          \"airportTerminal\": \"<ChangeThis: CopyValueFromGetPassenger-Flights>\"\r\n        },\r\n    \t\"flightNumber\": \"<ChangeThis: CopyValueFromGetPassenger-Flights-OperatingAirline>\",\r\n        \"departureDateTime\": \"<ChangeThis: CopyValueFromGetPassenger-Flights-Scheduled>\"\r\n      }\r\n    ],\r\n    \"passengers\": [\r\n      {\r\n        \"passengerID\": \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\",\r\n        \"firstName\": \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\",\r\n        \"title\": \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\",\r\n        \"gender\": \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\",\r\n        \"flightIDs\": [\r\n          \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\"\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CancelCheckin",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/checkin/cancelcheckin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\",\r\n  \"request\": {\r\n    \"flights\": [\r\n      {\r\n        \"flightIDs\": [\r\n          \"<ChangeThis: CopyValueFromCheckinRequest>\"\r\n        ],\r\n        \"originAirport\": {\r\n          \"airportCode\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n          \"airportTerminal\": \"<ChangeThis: CopyValueFromCheckinRequest>\"\r\n        },\r\n        \"destinationAirport\": {\r\n          \"airportCode\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n          \"airportTerminal\": \"<ChangeThis: CopyValueFromCheckinRequest>\"\r\n        },\r\n    \t\"flightNumber\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n        \"departureDateTime\": \"<ChangeThis: CopyValueFromCheckinRequest>\"\r\n      }\r\n    ],\r\n    \"passengers\": [\r\n      {\r\n        \"passengerID\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n        \"firstName\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n        \"title\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n        \"gender\": \"<ChangeThis: CopyValueFromCheckinRequest>\",\r\n        \"flightIDs\": [\r\n          \"<ChangeThis: CopyValueFromCheckinRequest>\"\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetBoardingPass",
+			"request": {
+				"url": "https://apidev.singaporeair.com/appchallenge/checkin/getboardingpass",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"request\": {\r\n  \t\"pnr\": \"<ChangeThis: CopyValueFromGetPassenger>\",\r\n    \"passengers\": [\r\n      {\r\n        \"passengerID\": \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\",\r\n        \"flightIDs\": [\r\n          \"<ChangeThis: CopyValueFromGetPassenger-Passengers>\"\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  \"clientUUID\":\"<ChangeThis: AnyUniqueStringForYourTeam>\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
