@@ -7,10 +7,15 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'scan.html'
 })
 export class ScanTicketsPage {
-  
+  qrData = null;
+  createdCode = null;
   scannedCode = null;
   constructor(private barcodeScanner: BarcodeScanner) {
     
+  }
+
+  createCode(){
+    this.createdCode = this.qrData;
   }
 
   scanCode(){
