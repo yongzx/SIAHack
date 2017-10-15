@@ -13,7 +13,6 @@ import { ScanTicketsPage } from '../pages/scan/scan';
 import { ExplorePage } from '../pages/explore/explore';
 import { VouchersPage } from '../pages/vouchers/vouchers';
 import { HomePage } from '../pages/home/home';
-import { ChallengesPage } from '../pages/challenges/challenges';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ExplorePage,
     VouchersPage,
     TabsPage,
-    ScanTicketsPage, 
-    ChallengesPage
+    ScanTicketsPage
   ],
   imports: [
     BrowserModule,
@@ -39,8 +37,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     VouchersPage,
     HomePage,
     TabsPage,
-    ScanTicketsPage,
-    ChallengesPage
+    ScanTicketsPage
   ],
   providers: [
     StatusBar,
