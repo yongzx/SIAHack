@@ -10,25 +10,27 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { FeedbackPage } from '../pages/feedback/feedback';
-import { ExplorePage } from '../pages/explore/explore';
+import { ItineraryPage } from '../pages/itinerary/itinerary';
 import { VouchersPage } from '../pages/vouchers/vouchers';
 import { HomePage } from '../pages/home/home';
 import { ChallengesPage } from '../pages/challenges/challenges';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
+import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ExplorePage,
+    ItineraryPage,
     VouchersPage,
     TabsPage,
     FeedbackPage, 
     ChallengesPage,
     PaymentPage,
-    PaycompletePage
+    PaycompletePage,
+    PaidVouchersPage
   ],
   imports: [
     BrowserModule,
@@ -39,14 +41,15 @@ import { PaycompletePage } from '../pages/paycomplete/paycomplete';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ExplorePage,
+    ItineraryPage,
     VouchersPage,
     HomePage,
     TabsPage,
     FeedbackPage,
     ChallengesPage,
     PaymentPage,
-    PaycompletePage
+    PaycompletePage,
+    PaidVouchersPage
   ],
   providers: [
     StatusBar,

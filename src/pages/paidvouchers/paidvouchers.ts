@@ -3,18 +3,14 @@ import { NavController } from 'ionic-angular';
 import { PaymentPage } from '../payment/payment';
 
 @Component({
-  selector: 'page-vouchers',
-  templateUrl: 'vouchers.html'
+  selector: 'page-paidvouchers',
+  templateUrl: 'paidvouchers.html'
 })
-export class VouchersPage {
+export class PaidVouchersPage {
 
   anotherPage = PaymentPage;
 
   constructor(public navCtrl: NavController) {
 
-  }
-
-  toggle(){
-    
   }
 }

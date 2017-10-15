@@ -18,7 +18,7 @@ import { PaycompletePage } from '../paycomplete/paycomplete';
 })
 export class PaymentPage {
 
-  anotherPage=PaycompletePage;
+  anotherPage = PaycompletePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

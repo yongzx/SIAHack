@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { PaidVouchersPage } from '../paidvouchers/paidvouchers';
 
 /**
  * Generated class for the PaycompletePage page.
@@ -15,7 +15,8 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'paycomplete.html',
 })
 export class PaycompletePage {
-  anotherPage=TabsPage;
+  anotherPage = PaidVouchersPage;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
