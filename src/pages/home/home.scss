@@ -9,8 +9,8 @@ page-home {
 }
 
 img{
-    height: 70vh;
-    width: auto;
+    height: 100vh;
+    width: 50vh;
     margin: auto;
     display: block;
 }
@@ -23,7 +23,7 @@ img{
 h2 {
   color: #294B88;
   font-weight: 600;
-  font-size: 80px;
+  font-size: 30px;
 }
 
 // BUTTON
@@ -34,7 +34,8 @@ h2 {
   border-radius: 4px;
   background-color:#294B88;
   border: none;
-  padding: 15px;
+  padding: 10px;
+  margin: 10px;
   width: 200px;
   transition: all 0.5s;
   color: white;
