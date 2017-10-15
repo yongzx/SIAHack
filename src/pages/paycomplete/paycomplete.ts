@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { AlertController } from 'ionic-angular';
-import { PaycompletePage } from '../paycomplete/paycomplete';
+import { TabsPage } from '../tabs/tabs';
 
 /**
- * Generated class for the PaymentPage page.
+ * Generated class for the PaycompletePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,19 +11,16 @@ import { PaycompletePage } from '../paycomplete/paycomplete';
 
 @IonicPage()
 @Component({
-  selector: 'page-payment',
-  templateUrl: 'payment.html',
+  selector: 'page-paycomplete',
+  templateUrl: 'paycomplete.html',
 })
-export class PaymentPage {
-
-  anotherPage=PaycompletePage;
-
+export class PaycompletePage {
+  anotherPage=TabsPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PaymentPage');
+    console.log('ionViewDidLoad PaycompletePage');
   }
-
 
 }

@@ -16,6 +16,7 @@ import { HomePage } from '../pages/home/home';
 import { ChallengesPage } from '../pages/challenges/challenges';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PaymentPage } from '../pages/payment/payment';
+import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PaymentPage } from '../pages/payment/payment';
     TabsPage,
     FeedbackPage, 
     ChallengesPage,
-    PaymentPage
+    PaymentPage,
+    PaycompletePage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { PaymentPage } from '../pages/payment/payment';
     TabsPage,
     FeedbackPage,
     ChallengesPage,
-    PaymentPage
+    PaymentPage,
+    PaycompletePage
   ],
   providers: [
     StatusBar,
