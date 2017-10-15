@@ -18,6 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
+import { DupFeedbackPage } from '../pages/dupfeedback/dupfeedback';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
     ChallengesPage,
     PaymentPage,
     PaycompletePage,
-    PaidVouchersPage
+    PaidVouchersPage,
+    DupFeedbackPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
     ChallengesPage,
     PaymentPage,
     PaycompletePage,
-    PaidVouchersPage
+    PaidVouchersPage,
+    DupFeedbackPage
   ],
   providers: [
     StatusBar,

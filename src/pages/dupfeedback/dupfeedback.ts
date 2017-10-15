@@ -1,11 +1,10 @@
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { DupFeedbackPage } from '../dupfeedback/dupfeedback';
 
 @Component({
-  selector: 'page-feedback',
-  templateUrl: 'feedback.html',
+  selector: 'page-dupfeedback',
+  templateUrl: 'dupfeedback.html',
   template: `
   <ion-item class="pageTitle">Feedback</ion-item>
   
@@ -41,21 +40,17 @@ import { DupFeedbackPage } from '../dupfeedback/dupfeedback';
       <ion-label >Others</ion-label>
       <ion-textarea [(ngModel)]="feedback.others" name="others"></ion-textarea>
     </ion-item>
-    <button ion-button type="submit" block [navPush]="anotherPage">Submit</button>
+    <button ion-button type="submit" block>Submit</button>
   </form>
   <button ion-button block [navPush]="anotherPage">Refresh</button>
 `
 })
-export class FeedbackPage {
-  anotherPage = DupFeedbackPage;
-
+export class DupFeedbackPage {
   feedback = {}
-  constructor(public navCtrl: NavController) {
-  }
-
   logForm() {
     console.log(this.feedback);
     alert("Feedback form submitted.");
+
   }
 }
 
