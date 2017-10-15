@@ -15,6 +15,7 @@ import { VouchersPage } from '../pages/vouchers/vouchers';
 import { HomePage } from '../pages/home/home';
 import { ChallengesPage } from '../pages/challenges/challenges';
 import { TabsPage } from '../pages/tabs/tabs';
+import { PaymentPage } from '../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     VouchersPage,
     TabsPage,
     FeedbackPage, 
-    ChallengesPage
+    ChallengesPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     HomePage,
     TabsPage,
     FeedbackPage,
-    ChallengesPage
+    ChallengesPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,
