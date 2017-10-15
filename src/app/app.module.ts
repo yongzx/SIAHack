@@ -19,6 +19,7 @@ import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
 import { DupFeedbackPage } from '../pages/dupfeedback/dupfeedback';
+import { PersonalizationPage} from '../pages/personalization/personalization';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DupFeedbackPage } from '../pages/dupfeedback/dupfeedback';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    DupFeedbackPage
+    DupFeedbackPage,
+    PersonalizationPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { DupFeedbackPage } from '../pages/dupfeedback/dupfeedback';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    DupFeedbackPage
+    DupFeedbackPage,
+    PersonalizationPage
   ],
   providers: [
     StatusBar,
