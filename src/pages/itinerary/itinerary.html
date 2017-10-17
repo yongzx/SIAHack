@@ -5,10 +5,87 @@
   </ion-header>
 
   <ion-content padding>
-    <div id="schedule">
-        <img src="assets/timeline.png" alt="your image">
-    </div>
-    <div id ="gMaps">
-        <a href = "https://www.google.com/maps/place/Singapore+Zoo/@1.4043485,103.790829,17z/data=!3m1!4b1!4m5!3m4!1s0x31da13d9102adcaf:0xb414fac8a43b1b91!8m2!3d1.4043485!4d103.793023" arget="_system">Maps</a></div>
+
+
+
+        <section id="cd-timeline" class="cd-container">
+          <div ng-repeat="activity in timeline">
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-picture dark">
+                <p>09:00</p>
+                <p>AM</p>
+              </div>
+              <!-- cd-timeline-img -->
+              <div class="cd-timeline-content dark">
+                <ion-card>
+
+                  <img src="assets/icon/cablecar.jpg">
+                  <ion-fab right top>
+                    <button ion-fab>
+                      <ion-icon name="pin"></ion-icon>
+                    </button>
+                  </ion-fab>
+
+                  <ion-item>
+                    <ion-icon name="football" item-start large></ion-icon>
+                    <h2>Cable Car</h2>
+                    <p>11 SIA St, Singapore, 012345</p>
+                  </ion-item>
+
+                  <ion-item>
+                    <span item-left>18 min</span>
+                    <span item-left>(2.6 mi)</span>
+                    <button ion-button icon-left clear item-end>
+                      <ion-icon name="navigate"></ion-icon>
+                      Start
+                    </button>
+                  </ion-item>
+
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+          <div ng-repeat="activity in timeline">
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-picture dark">
+                <p>10:00</p>
+                <p>AM</p>
+              </div>
+              <!-- cd-timeline-img -->
+              <div class="cd-timeline-content dark">
+                <ion-card>
+
+                  <img src="assets/icon/cablecar.jpg">
+                  <ion-fab right top>
+                    <button ion-fab>
+                      <ion-icon name="pin"></ion-icon>
+                    </button>
+                  </ion-fab>
+
+                  <ion-item>
+                    <ion-icon name="football" item-start large></ion-icon>
+                    <h2>Cable Car</h2>
+                    <p>11 SIA St, Singapore, 012345</p>
+                  </ion-item>
+
+                  <ion-item>
+                    <span item-left>18 min</span>
+                    <span item-left>(2.6 mi)</span>
+                    <button ion-button icon-left clear item-end>
+                      <ion-icon name="navigate"></ion-icon>
+                      Start
+                    </button>
+                  </ion-item>
+
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+
 
   </ion-content>
