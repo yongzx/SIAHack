@@ -14,7 +14,10 @@ import { ShareService } from '../../services/share/share';
   templateUrl: 'personalization.html'
 })
 export class PersonalizationPage {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
   personalized_act = {};
   anotherPage = VouchersPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService) {
@@ -30,4 +33,15 @@ export class PersonalizationPage {
     console.log(this.shareService.getPreferences());
   }
 
+<<<<<<< HEAD
+  personalAct() {
+    console.log(this.personalized_act);
+  }
+
+
+
+
 }
+=======
+}
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
