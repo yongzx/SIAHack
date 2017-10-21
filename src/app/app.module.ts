@@ -21,6 +21,9 @@ import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
 import { PersonalizationPage} from '../pages/personalization/personalization';
 
+import { ShareService } from '../services/share/share';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -60,6 +63,7 @@ import { PersonalizationPage} from '../pages/personalization/personalization';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    ShareService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })

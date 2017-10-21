@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-        E - Tickets  [Budget: $40]
+        E - Tickets  [Budget: ${{preferences.budget}}]
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,8 +9,11 @@
 <ion-content>
 <ion-card>
     <div class="bar bar-header bar-light">
-        <h1 class="title">Budget: $40</h1>
-      </div>
+        <h1 class="title">Budget: ${{preferences.budget}}</h1>
+        <ion-list>
+          <ion-item *ngFor="let activity of data.activities"> {{activity.title}}</ion-item>
+        </ion-list>
+        </div>
 </ion-card>  
   
 <ion-card>
