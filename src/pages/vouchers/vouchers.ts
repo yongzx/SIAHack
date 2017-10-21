@@ -42,6 +42,5 @@ export class VouchersPage {
     
   pushpage(){
     this.navCtrl.push(PaymentPage);
-    this.data.
-  }
+}
 }
