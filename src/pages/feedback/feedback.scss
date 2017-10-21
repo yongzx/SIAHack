@@ -3,9 +3,14 @@ page-about {
 }
 
 .input-label{
-    padding : 10px;
-    margin: 30px;
+    padding : 5px;
+    margin: 20px;
     font-size: 20px;
+    text-align: left;
+}
+
+.selectionBox{
+    text-align: left;
 }
 
 .form{
@@ -16,4 +21,15 @@ page-about {
 .selectionBox{
     padding : 10px;
     margin: 10px;
+}
+
+ion-slide.swiper-slide {
+    align-items: flex-start;
+}
+
+
+textarea {
+    max-width: 100%;
+    width: 100%;
+    height: 60vh;
 }

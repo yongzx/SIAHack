@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
-import { VouchersPage } from '../vouchers/vouchers';
+import { PersonalizationPage } from '../personalization/personalization';
 import { ItineraryPage } from '../itinerary/itinerary';
 import { ChallengesPage } from '../challenges/challenges';
 import { FeedbackPage } from '../feedback/feedback';
@@ -13,7 +13,7 @@ import { FeedbackPage } from '../feedback/feedback';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = VouchersPage;
+  tab2Root = PersonalizationPage;
   tab3Root = ItineraryPage;
   tab4Root = ChallengesPage;
   tab5Root = FeedbackPage;
