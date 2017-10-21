@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-        E - Tickets  [Budget: ${{preferences.budget}}]
+        Tickets  [Budget: ${{preferences.budget}}]
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -24,9 +24,9 @@
               <ion-grid>
                 <ion-row>
                   <ion-col col-8>
-                    <button ion-button icon-left clear small>
+                    <button ion-button icon-left clear small [navPush]="GmapviewPage">
                       <ion-icon name="camera"></ion-icon>
-                      <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
+                      <div>Explore a Snapshot</div>
                     </button>
 
                   </ion-col>
