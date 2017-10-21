@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PaidVouchersPage } from '../paidvouchers/paidvouchers';
+import { VouchersPage } from '../vouchers/vouchers';
 
 /**
  * Generated class for the PaycompletePage page.
@@ -15,13 +15,17 @@ import { PaidVouchersPage } from '../paidvouchers/paidvouchers';
   templateUrl: 'paycomplete.html',
 })
 export class PaycompletePage {
-  anotherPage = PaidVouchersPage;
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaycompletePage');
+  }
+
+  pushpage(){
+    console.log("Back to vouchers");
+    this.navCtrl.push(VouchersPage);
   }
 
 }

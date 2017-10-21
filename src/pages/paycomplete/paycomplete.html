@@ -15,7 +15,7 @@
 
 <ion-content padding>
 	<h1> Payment complete! Enjoy your trip! </h1>
-	<button ion-button [navPush]="anotherPage">
+	<button ion-button (click)="pushpage()">
 		<ion-icon name="Return">Return to Vouchers Page</ion-icon>
 	</button>
 </ion-content>

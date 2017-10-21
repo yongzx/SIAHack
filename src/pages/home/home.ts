@@ -9,10 +9,13 @@ import 'rxjs/add/operator/map';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  siaData : object;
+
   qrData = null;
   createdCode = null;
   scannedCode = null;
   constructor(private barcodeScanner: BarcodeScanner, public http: Http) { 
+    this.siaData = {yes: "bluff"};
   }
   
   scanCode(){
@@ -28,6 +31,7 @@ export class HomePage {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('x-api-key', 'du1yO8KLZm9PfFeg6OHQW8CFcpK1RMym3JXp78Uk');
+    headers.append('Access-Control-Allow-Origin',  '*');
     
     let body = {
       "request": {
@@ -39,6 +43,7 @@ export class HomePage {
     this.http.post('https://apidev.singaporeair.com/appchallenge/checkin/getpassenger', JSON.stringify(body), {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
+          this.siaData = data;
           console.log(data);
         });
   

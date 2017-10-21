@@ -53,7 +53,7 @@
 
                     <ion-col col-4>
 
-                      <button ion-button icon-left clear small [navPush]="anotherPage">
+                      <button ion-button icon-left clear small (click)="pushpage()">
                         <ion-icon name="cash"></ion-icon>
                         <div><s>{{activity.fromOriginalPrice}}</s> {{activity.fromPrice}}</div>
                       </button>

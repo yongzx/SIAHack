@@ -10,9 +10,11 @@ import { ShareService } from '../../services/share/share';
 export class FeedbackPage {
   feedback = {}
   miles: number; 
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService) {
     this.miles = this.shareService.getMiles();
   }
+
   logForm() {
     console.log(this.feedback);
     this.navCtrl.setRoot(this.navCtrl.getActive().component);

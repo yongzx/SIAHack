@@ -1,6 +1,5 @@
 {
   "name": "FUNsia",
-  "app_id": "f428ebeb",
   "v3": true,
   "proxies": [
     {
@@ -9,5 +8,6 @@
     }
   ],
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "app_id": "e414e2bb"
 }
