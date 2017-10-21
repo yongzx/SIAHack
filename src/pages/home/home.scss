@@ -26,8 +26,9 @@ button{
 }
 
 .titleText{ 
-	font-family: cursive; 
+  font: "FranklinGothicDemi";
 	font-size: large; 
+  src: url("FranklinGothicDemi.ttf");
 }
 
 
@@ -59,7 +60,6 @@ h3 {
   font-weight: 600 !important;
   font-size: 30px !important;
   text-align: center !important;
-  font-family: cursive !important;
   padding-bottom: 30px !important; 
 }
 
