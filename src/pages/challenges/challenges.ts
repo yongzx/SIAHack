@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ShareService } from '../../services/share/share';
 
 /**
  * Generated class for the ChallengesPage page.
@@ -14,12 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'challenges.html',
 })
 export class ChallengesPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  challenges = {};
+  constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChallengesPage');
   }
 
+  logForm() {
+    console.log(this.challenges);
+    var challengesCompleted = Object.keys(this.challenges);
+    var krisMilesFromChallenges = challengesCompleted.length * 10;
+    this.shareService.addMiles(krisMilesFromChallenges);
+    console.log(this.shareService.getMiles());
+  }
 }

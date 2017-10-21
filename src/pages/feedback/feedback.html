@@ -10,6 +10,14 @@
   <form (ngSubmit)="logForm()">
     <ion-slides>
       <ion-slide>
+        <ion-card>
+          <h1>Miles Accrue:</h1>
+          <h2>{{miles}}</h2>
+          <button ion-button type = "Submit">Refresh</button>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
         <label class="item item-input item-select">
           <div class="input-label">
             Are you satisfied with the Stopover holidays?
@@ -20,32 +28,29 @@
             <ion-option value="average">Average</ion-option>
             <ion-option value="negative">Unhappy</ion-option>
           </ion-select>
+        </label>
 
-          <label class="item item-input item-select">
-            <div class="input-label">
-              What do you think about our services?
-            </div>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            What do you think about our services?
+          </div>
 
-            <ion-select [(ngModel)]="feedback.service" name="service">
-              <ion-option value="good" selected>Good</ion-option>
-              <ion-option value="bad">Needs Improvement</ion-option>
-            </ion-select>
-
-          </label>
-
+          <ion-select [(ngModel)]="feedback.service" name="service">
+            <ion-option value="good" selected>Good</ion-option>
+            <ion-option value="bad">Needs Improvement</ion-option>
+          </ion-select>
         </label>
       </ion-slide>
 
-
       <ion-slide>
-
         <ion-item class="form">
           <ion-label>Others</ion-label>
           <ion-textarea [(ngModel)]="feedback.others" name="others"></ion-textarea>
         </ion-item>
         <button ion-button type="submit" block>Submit</button>
-
       </ion-slide>
+
     </ion-slides>
   </form>
+
 </ion-content>

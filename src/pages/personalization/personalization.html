@@ -8,6 +8,21 @@
 
 <ion-content>
   <ion-list>
+    <div class="title">
+      <h2>Budget</h2>
+    </div>
+    <ion-item>
+      <ion-range min="0" max="2000" [(ngModel)]="personalized_act.budget" color="danger" pin="true">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>2000</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <div class="title">
+          <h2>Preferences</h2>
+        </div>
     <ion-item>
       <ion-label>Adventure</ion-label>
       <ion-checkbox [(ngModel)]="personalized_act.adventure" (click)="personalAct()"></ion-checkbox>
@@ -15,22 +30,38 @@
 
     <ion-item>
       <ion-label>Nature</ion-label>
+<<<<<<< HEAD
       <ion-checkbox [(ngModel)]="personalized_act.nature"(click)="personalAct()"></ion-checkbox>
+=======
+      <ion-checkbox [(ngModel)]="personalized_act.nature" (click)="personalAct()"></ion-checkbox>
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
     </ion-item>
 
     <ion-item>
       <ion-label>Food</ion-label>
+<<<<<<< HEAD
       <ion-checkbox [(ngModel)]="personalized_act.food"(click)="personalAct()"></ion-checkbox>
+=======
+      <ion-checkbox [(ngModel)]="personalized_act.food" (click)="personalAct()"></ion-checkbox>
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
     </ion-item>
 
     <ion-item>
       <ion-label>Culture</ion-label>
+<<<<<<< HEAD
       <ion-checkbox [(ngModel)]="personalized_act.culture"(click)="personalAct()"></ion-checkbox>
+=======
+      <ion-checkbox [(ngModel)]="personalized_act.culture" (click)="personalAct()"></ion-checkbox>
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
     </ion-item>
 
     <ion-item>
       <ion-label>History</ion-label>
+<<<<<<< HEAD
       <ion-checkbox [(ngModel)]="personalized_act.history"(click)="personalAct()"></ion-checkbox>
+=======
+      <ion-checkbox [(ngModel)]="personalized_act.history" (click)="personalAct()"></ion-checkbox>
+>>>>>>> 6671cba9ff8fd7d6291a820d7c967bf234f2ba95
     </ion-item>
   </ion-list>
 
