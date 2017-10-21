@@ -22,23 +22,23 @@ export class VouchersPage {
   }
 
   toggle(){
-    
+
   }
 
   ionViewDidLoad(){
-    
+
      let headers = new Headers();
      headers.append('key', '531bd696-5113-469c-8086-39073fe89517');
      headers.append('Accept', 'application/json');
- 
-     this.http.get('https://apim.expedia.com/x/activities/search?location=London',{headers: headers})
+
+     this.http.get('https://apim.expedia.com/x/activities/search?location=Singapore',{headers: headers})
          .map(res => res.json())
          .subscribe(data => {
            console.log(data);
            this.data = data;
            console.log(this.data);
          });
-   
+
        }
- 
+
 }
