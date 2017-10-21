@@ -3,6 +3,34 @@ page-home {
   src: url("FranklinGothicDemi.ttf");
 }
 
+/* homescreen background image */
+.makethissky {
+}
+
+.content-md{ 
+	padding-left: 0px !important; 
+	padding-right: 0px !important;
+}
+
+img{ 
+	margin-left: 0px !important; 
+	margin-right: 0px !important;
+	width: 200% !important;
+	overflow: hidden;
+	height: 50vh !important;
+	
+}
+
+button{ 
+	margin-top: 30px !important;
+}
+
+.titleText{ 
+	font-family: cursive; 
+	font-size: large; 
+}
+
+
 .title {
   text-align: center;
   padding-top: 5%;
@@ -26,6 +54,15 @@ h2 {
   font-size: 30px;
 }
 
+h3 { 
+  color: #294B88 !important;
+  font-weight: 600 !important;
+  font-size: 30px !important;
+  text-align: center !important;
+  font-family: cursive !important;
+  padding-bottom: 30px !important; 
+}
+
 // BUTTON
 .next a {
   color: white;
@@ -40,6 +77,8 @@ h2 {
   transition: all 0.5s;
   color: white;
 }
+
+
 
 .next span {
   cursor: pointer;
@@ -64,4 +103,9 @@ h2 {
 .next:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.button{ 
+	width: 60%;
+	margin: 20%;
 }
