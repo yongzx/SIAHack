@@ -41,8 +41,7 @@ export class VouchersPage {
        }
     
   pushpage(){
-    console.log("works");
     this.navCtrl.push(PaymentPage);
-
+    this.data.
   }
 }

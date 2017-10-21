@@ -11,6 +11,6 @@ export class PaidVouchersPage {
   anotherPage = PaymentPage;
 
   constructor(public navCtrl: NavController) {
-
+    
   }
 }
