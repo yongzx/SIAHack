@@ -3,10 +3,14 @@ page-contact {
 }
 
 img {
-	height:auto;
-	width:auto;
+	height:auto !important;
+	width:auto !important;
 }
 
-ion-item {
-	padding: 0;
+ion-col {
+	margin: 0;
+}
+.button {
+	margin: 0 !important;
+	width: auto;
 }

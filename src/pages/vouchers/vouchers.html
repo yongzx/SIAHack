@@ -6,470 +6,161 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-<ion-card>
-    <div class="bar bar-header bar-light">
-        <h1 class="title">Budget: ${{preferences.budget}}</h1>
-        <ion-list>
-          <ion-item *ngFor="let activity of data.activities">
-            <img src={{activity.imageUrl}}/>
+<div class="bar bar-header bar-light">
+  <h1 class="title">Budget: ${{preferences.budget}}</h1>
+</div>
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let activity of data.activities">
+        <!-- DEMO -->
+        <ion-card>
+          <img src="{{activity.imageUrl}}"/>
             <ion-card-content>
-              <ion-card-title>
+              <ion-card-title text-wrap>
                 {{activity.title}}
-                </ion-card-title>
-              <p>
-                {{activity.shortDescription}}
-              </p>
+              </ion-card-title>
 
 
               <ion-grid>
-            <ion-row>
-              <ion-col col-8><ion-col>
-                <button ion-button icon-left clear small>
-                  <ion-icon name="camera"></ion-icon>
-                  <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-                </button>
-              </ion-col>
-              <ion-col>
-                <button ion-button icon-left clear small>
-                  <ion-icon name="calendar"></ion-icon>
-                  <div>Add to Calendar</div>
-                </button>
-              </ion-col>
-              </ion-col>
+                <ion-row>
+                  <ion-col col-8>
+                    <button ion-button icon-left clear small>
+                      <ion-icon name="camera"></ion-icon>
+                      <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
+                    </button>
 
-              <ion-col col-4>
-              	<button ion-button icon-left clear small>
-                  <ion-icon name="map"></ion-icon>
-                  <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-                </button>
+                  </ion-col>
 
-                <button ion-button icon-left clear small [navPush]="anotherPage">
-                  <ion-icon name="cash"></ion-icon>
-                  <div><s>${{activity.fromOriginalPrice}}</s> {{activity.fromPrice}}</div>
-                </button>
+                  <ion-col col-4>
+                  	<button ion-button icon-left clear small>
+                      <ion-icon name="map"></ion-icon>
+                      <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
+                    </button>
+
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+
+                <ion-grid>
+                  <ion-row>
+                    <ion-col col-8>
+                      <button ion-button icon-left clear small>
+                        <ion-icon name="calendar"></ion-icon>
+                        <div>Add to Calendar</div>
+                      </button>
+
+                    </ion-col>
+
+                    <ion-col col-4>
+
+                      <button ion-button icon-left clear small [navPush]="anotherPage">
+                        <ion-icon name="cash"></ion-icon>
+                        <div><s>{{activity.fromOriginalPrice}}</s> {{activity.fromPrice}}</div>
+                      </button>
 
 
-                </ion-col>
-            </ion-row>
-          </ion-grid>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
 
-            </ion-card-content>
-          </ion-item>
-        </ion-list>
-        </div>
-</ion-card>
+                </ion-card-content>
+                </ion-card>
 
+        <!-- FOR NOW
+        <img src={{activity.imageUrl}}/>
+        <ion-card>
+        <ion-card-content>
+          <ion-card-title text-wrap>
+            {{activity.title}}
+          </ion-card-title>
+          <p>
+            {{activity.shortDescription}}
+          </p>
+
+          <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <button ion-button icon-left clear small>
+              <ion-icon name="camera"></ion-icon>
+              <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
+            </button>
+
+            <button ion-button icon-left clear small>
+              <ion-icon name="calendar"></ion-icon>
+              <div>Add to Calendar</div>
+            </button>
+
+          </ion-col>
+
+          <ion-col col-4>
+            <button ion-button icon-left clear small>
+              <ion-icon name="map"></ion-icon>
+              <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
+            </button>
+
+            <button ion-button icon-left clear small>
+              <ion-icon name="cash"></ion-icon>
+              <div>INCLUDED</div>
+            </button>
+
+
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+      </ion-card>
+
+
+-->
+      </ion-item>
+    </ion-list>
+
+<!-- DEMO -->
 <ion-card>
   <img src="assets/icon/cablecar.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Sentosa Cable Car
+    <ion-card-content>
+      <ion-card-title>
+        Sentosa Cable Car
       </ion-card-title>
-    <p>
-      Take in the magnificence of Singapore's southern coastline from 40 stories in the air
-    </p>
-
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small [navPush]="anotherPage">
-        <ion-icon name="cash"></ion-icon>
-        <div><s>$30</s> $10</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-
-
-<ion-card>
-  <img src="assets/icon/chilicrab.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Chili Crab
-      </ion-card-title>
-    <p>
-      Savour one of Singapore's favourite delicacies at half price at Veera's Curry
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small [navPush]="anotherPage">
-        <ion-icon name="cash"></ion-icon>
-        <div><s>$30</s> $10</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/luge.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Luge
-      </ion-card-title>
-    <p>
-      Get your heart pumping racing downhill on the Sentosa Luge
-    </p>
-
-   <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small>
-        <ion-icon name="cash"></ion-icon>
-        <div>INCLUDED</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/maxresdefault.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Singapore Zoo
-      </ion-card-title>
-    <p>
-      With more than 2800 animals over 300 species, various thematic exhibits and edu-taining shows, the fun never ends at the world's best rainforest zoo!
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small>
-        <ion-icon name="cash"></ion-icon>
-        <div>INCLUDED</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/mbs.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Marina Bay Sands
-      </ion-card-title>
-    <p>
-      Take in the Singapore Skyline while taking a swim, at the world's first skypool
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small [navPush]="anotherPage">
-        <ion-icon name="cash"></ion-icon>
-        <div><s>$400</s> $250</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-<ion-card>
-  <img src="assets/icon/nails.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Nine Inch Nails Spa
-      </ion-card-title>
-    <p>
-      Treat yourself to a a relaxing manicure with your lady friends
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small [navPush]="anotherPage">
-        <ion-icon name="cash"></ion-icon>
-        <div><s>$20</s> $10</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/orchids.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      National Orchid Garden
-      </ion-card-title>
-    <p>
-      Love flowers? See, touch and smell over 1000 species of flowers at the National Orchid Garden!
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small>
-        <ion-icon name="cash"></ion-icon>
-        <div>INCLUDED</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/pulauubin.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Pulau Ubin
-      </ion-card-title>
-    <p>
-      Escape to Singapore's idyllic backwaters and experience nature, wildlife and good food!
-    </p>
-
-   <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small [navPush]="anotherPage">
-        <ion-icon name="cash"></ion-icon>
-        <div><s>$50</s> $25</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <img src="assets/icon/riverboat.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      River Boat
-      </ion-card-title>
-    <p>
-      Sail through the lights and sounds of Singapore's Central Business District
-    </p>
-
-    <ion-grid>
-  <ion-row>
-    <ion-col col-8><ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="camera"></ion-icon>
-        <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="calendar"></ion-icon>
-        <div>Add to Calendar</div>
-      </button>
-    </ion-col>
-    </ion-col>
-
-    <ion-col col-4>
-    	<button ion-button icon-left clear small>
-        <ion-icon name="map"></ion-icon>
-        <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-      </button>
-
-      <button ion-button icon-left clear small>
-        <ion-icon name="cash"></ion-icon>
-        <div>INCLUDED</div>
-      </button>
-
-
-      </ion-col>
-  </ion-row>
-</ion-grid>
-
-  </ion-card-content>
-</ion-card>
-
-
-
-
-
+      <p>
+        Take in the magnificence of Singapore's southern coastline from 40 stories in the air
+      </p>
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8><ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="camera"></ion-icon>
+              <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="calendar"></ion-icon>
+              <div>Add to Calendar</div>
+            </button>
+          </ion-col>
+          </ion-col>
+
+          <ion-col col-4>
+          	<button ion-button icon-left clear small>
+              <ion-icon name="map"></ion-icon>
+              <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
+            </button>
+
+            <button ion-button icon-left clear small [navPush]="anotherPage">
+              <ion-icon name="cash"></ion-icon>
+              <div><s>$30</s> $10</div>
+            </button>
+
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        </ion-card-content>
+        </ion-card>
 
 </ion-content>
