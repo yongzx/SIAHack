@@ -20,7 +20,6 @@ import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
 import { PersonalizationPage} from '../pages/personalization/personalization';
-import { PassengerProvider } from '../providers/passenger/passenger';
 
 @NgModule({
   declarations: [
@@ -62,7 +61,6 @@ import { PassengerProvider } from '../providers/passenger/passenger';
     SplashScreen,
     BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PassengerProvider
   ]
 })
 export class AppModule {}
