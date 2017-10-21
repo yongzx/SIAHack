@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -18,7 +19,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
-import { DupFeedbackPage } from '../pages/dupfeedback/dupfeedback';
 import { PersonalizationPage} from '../pages/personalization/personalization';
 
 @NgModule({
@@ -33,14 +33,14 @@ import { PersonalizationPage} from '../pages/personalization/personalization';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    DupFeedbackPage,
     PersonalizationPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FormsModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,14 +54,13 @@ import { PersonalizationPage} from '../pages/personalization/personalization';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    DupFeedbackPage,
     PersonalizationPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
