@@ -1,11 +1,51 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
-        Feedback
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+    <ion-title>
+      Feedback
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding>
+  <form (ngSubmit)="logForm()">
+    <ion-slides>
+      <ion-slide>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Are you satisfied with the Stopover holidays?
+          </div>
 
+          <ion-select [(ngModel)]="feedback.satisfaction" name="satisfaction">
+            <ion-option value="happy" selected>Happy</ion-option>
+            <ion-option value="average">Average</ion-option>
+            <ion-option value="negative">Unhappy</ion-option>
+          </ion-select>
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              What do you think about our services?
+            </div>
+
+            <ion-select [(ngModel)]="feedback.service" name="service">
+              <ion-option value="good" selected>Good</ion-option>
+              <ion-option value="bad">Needs Improvement</ion-option>
+            </ion-select>
+
+          </label>
+
+        </label>
+      </ion-slide>
+
+
+      <ion-slide>
+
+        <ion-item class="form">
+          <ion-label>Others</ion-label>
+          <ion-textarea [(ngModel)]="feedback.others" name="others"></ion-textarea>
+        </ion-item>
+        <button ion-button type="submit" block>Submit</button>
+
+      </ion-slide>
+    </ion-slides>
+  </form>
 </ion-content>
