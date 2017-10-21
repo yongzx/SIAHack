@@ -10,10 +10,34 @@ ion-scroll[scrollX] {
 
 #skyline{
 	height: 150px !important;
-	width: auto;
+	padding: 5px !important;
+	border-color: white;
+	border-width: thick;
 }
 
 .scroll-content{
 	padding: 0px !important;
 }
     
+.categories button{ 
+	margin-top: 0px !important;
+}
+
+#instaTopBar{ 
+	background: linear-gradient(45deg, #4c68d7, #bc2a8d); 
+	height: 40px;
+	
+}
+
+#instaBottomBar{ 
+
+	background: linear-gradient(45deg, #8a3ab9, #fbad50); 
+	
+	}
+
+p{ 
+	margin-top: 0em !important;
+	margin-bottom: 0em !important;
+	padding-top: 15px;
+	margin-left: 5%;
+}
