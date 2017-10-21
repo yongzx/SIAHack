@@ -18,15 +18,13 @@
           </ion-card-title>
 
 
-          <ion-grid>
-            <ion-row>
-              <ion-col col-8>
-                <button ion-button icon-left clear small>
-                  <ion-icon name="camera"></ion-icon>
-                  <div>
-                    <a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a>
-                  </div>
-                </button>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-8>
+                    <button ion-button icon-left clear small [navPush]="GmapviewPage">
+                      <ion-icon name="camera"></ion-icon>
+                      <div>Explore a Snapshot</div>
+                    </button>
 
               </ion-col>
 

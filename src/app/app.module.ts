@@ -20,6 +20,7 @@ import { PaymentPage } from '../pages/payment/payment';
 import { PaycompletePage } from '../pages/paycomplete/paycomplete';
 import { PaidVouchersPage } from '../pages/paidvouchers/paidvouchers';
 import { PersonalizationPage} from '../pages/personalization/personalization';
+import {GmapviewPage} from '../pages/gmapview/gmapview';
 
 import { ShareService } from '../services/share/share';
 
@@ -36,7 +37,8 @@ import { ShareService } from '../services/share/share';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    PersonalizationPage
+    PersonalizationPage,
+    GmapviewPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { ShareService } from '../services/share/share';
     PaymentPage,
     PaycompletePage,
     PaidVouchersPage,
-    PersonalizationPage
+    PersonalizationPage,
+    GmapviewPage
   ],
   providers: [
     StatusBar,

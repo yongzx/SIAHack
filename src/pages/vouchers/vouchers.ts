@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { PaymentPage } from '../payment/payment';
 import { Http, Headers } from '@angular/http';
+import { GmapviewPage } from "../gmapview/gmapview"
 import { ShareService } from '../../services/share/share';
 import 'rxjs/add/operator/map';
 
@@ -11,7 +12,8 @@ import 'rxjs/add/operator/map';
 })
 
 export class VouchersPage {
-
+  GmapviewPage = GmapviewPage;
+  
   preferences: object;
   data: object;
   passPrice: number;
