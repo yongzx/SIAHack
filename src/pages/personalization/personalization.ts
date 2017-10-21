@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
 import { VouchersPage } from '../vouchers/vouchers';
-
+import { ShareService } from '../../services/share/share';
 /**
  * Generated class for the ChallengesPage page.
  *
@@ -14,8 +14,20 @@ import { VouchersPage } from '../vouchers/vouchers';
   templateUrl: 'personalization.html'
 })
 export class PersonalizationPage {
+
+  personalized_act = {};
   anotherPage = VouchersPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ChallengesPage');
+  }
+
+  personalAct() {
+    console.log(this.personalized_act);
+    this.shareService.setPreferences(this.personalized_act);
+    console.log(this.shareService.getPreferences());
   }
 
 }

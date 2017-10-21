@@ -15,13 +15,12 @@ import { ShareService } from '../../services/share/share';
   templateUrl: 'challenges.html',
 })
 export class ChallengesPage {
-  challenges = {}
+  challenges = {};
   constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChallengesPage');
-
   }
 
   logForm() {
