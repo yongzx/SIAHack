@@ -19,6 +19,8 @@ export class HomePage {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
     })
+    var divOne = document.getElementById('hidethislater');
+	divOne.style.visibility = 'hidden';
   }
 
   ionViewDidLoad(){

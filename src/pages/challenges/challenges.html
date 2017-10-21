@@ -9,44 +9,69 @@
 </ion-header>
 
 <ion-content>
-
-  <p style="font-weight: bold; margin-left: 30%;">#SGthroughSIA</p>
-
+<div id="instaTopBar" style="margin-top: 0px; !important">
+<p style="font-weight: bolder; padding-left: 30%; font-size: larger;
+	color: white; font-family: cursive">#SGthroughSIA</p>
+</div>
+<div id="instaBottomBar">
   <ion-scroll scrollX style="height:160px;">
-    <div onclick="location.href='https://www.instagram.com/p/BaQwruRhXVU/?hl=en&tagged=singapore';" class="scroll-item">
-      <img id="skyline" src="assets/icon/insta1.jpg" />
-    </div>
-
-    <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';" class="scroll-item">
-      <img id="skyline" src="assets/icon/insta2.jpg" />
-    </div>
-
-    <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';" class="scroll-item">
-      <img id="skyline" src="assets/icon/insta3.jpg" />
-    </div>
-    <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';" class="scroll-item">
-      <img id="skyline" src="assets/icon/insta4.jpg" />
-    </div>
+  <div onclick="location.href='https://www.instagram.com/p/BaQwruRhXVU/?hl=en&tagged=singapore';"class="scroll-item">
+      <img id="skyline" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580266_1955906164663288_5764936483169370112_n.jpg"/>
+  </div>
+ 
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580053_1605490782834887_2773266567780106240_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22638896_130242567633577_7480573874069831680_n.jpg"/>
+  </div>
+   <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580853_125013548163066_6995978739901267968_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580540_358760401235107_3071665498048430080_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22500193_949844555153498_3728525443972726784_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580266_1955906164663288_5764936483169370112_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22638896_130242567633577_7480573874069831680_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580053_1605490782834887_2773266567780106240_n.jpg"/>
+  </div>
+  
+  <div onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"class="scroll-item">
+      <img id="skyline"src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/22580853_125013548163066_6995978739901267968_n.jpg"/>
+  </div>
   </ion-scroll>
-
-  <button onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';" style="margin-left: 70%; height: 40px; width: 100px; font-weight: bold; background-color: #EFBF4C">
-    Link Instagram
+  
+  <button onclick="location.href='https://www.instagram.com/p/BaOQzztBWUp/?taken-by=singaporeair';"style="margin-left: 70%; height: 40px; width: 100px; font-weight: bold; background-color: #EFBF4C; margin-top: 0px !important; margin-bottom: 15px !important;border: 2px thin; border-radius: 10px;"> 
+  		Link Instagram
   </button>
+</div>
 
   <ion-item>
     <div>
-      <h2>Challenges for fun-loving adventurous spirits! Complete these challenges, posting pictures on either Facebook or Instagram
-        with the hashtag
-        <b>#SIAStopoverHoliday</b> and win KrisFlyer miles!</h2>
+      <h2>Challenges for fun-loving adventurous spirits! </h2>
     </div>
   </ion-item>
 
   <form (ngSubmit)="logForm()">
     <ion-list>
 
-      <ion-list-header>
-        <h1>Snap a picture with...</h1>
-      </ion-list-header>
+      <ion-list-header style = "text-align: center">
+      <h1><ion-icon name="image"></ion-icon>Snap a picture with...</h1>
+    </ion-list-header>
 
       <ion-item>
         <ion-label>A Merlion</ion-label>
@@ -65,9 +90,10 @@
 
       <!-- Food category tasks -->
 
-      <ion-list-header>
-        <h1>Munch on some...</h1>
-      </ion-list-header>
+       <ion-list-header style = "text-align: center">
+      <h1><ion-icon name="pizza"></ion-icon>Munch on some...</h1>
+    </ion-list-header>
+
 
       <ion-item>
         <ion-label>Hainanese Chicken Rice</ion-label>
@@ -86,9 +112,9 @@
 
       <!-- Bonus level challenges -->
 
-      <ion-list-header>
-        <h1>Take it to the next level!</h1>
-      </ion-list-header>
+        <ion-list-header style = "text-align: center">
+      <h1><ion-icon name="paper-plane"></ion-icon>Take it to the next level!</h1>
+    </ion-list-header>
 
       <ion-item>
         <ion-label>Catch A Pokemon on Pokemon Go!</ion-label>
