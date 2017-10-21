@@ -27,7 +27,7 @@ export class PersonalizationPage {
   personalAct() {
     console.log(this.personalized_act);
     this.shareService.setPreferences(this.personalized_act);
-    console.log(this.shareService.getPreferences());
+   
   }
 
 }

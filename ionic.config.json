@@ -1,8 +1,13 @@
 {
   "name": "FUNsia",
   "app_id": "f428ebeb",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
+  "v3": true,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://apidev.singaporeair.com/appchallenge/checkin/getpassenger"
+    }
+  ],
+  "integrations": {},
+  "type": "ionic-angular"
 }
