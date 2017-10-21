@@ -10,27 +10,27 @@
   <ion-list>
     <ion-item>
       <ion-label>Adventure</ion-label>
-      <ion-checkbox [(ngModel)]="adventure"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="personalized_act.adventure" (click)="personalAct()"></ion-checkbox>
     </ion-item>
 
     <ion-item>
       <ion-label>Nature</ion-label>
-      <ion-checkbox [(ngModel)]="nature"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="personalized_act.nature"(click)="personalAct()"></ion-checkbox>
     </ion-item>
 
     <ion-item>
       <ion-label>Food</ion-label>
-      <ion-checkbox [(ngModel)]="food"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="personalized_act.food"(click)="personalAct()"></ion-checkbox>
     </ion-item>
 
     <ion-item>
       <ion-label>Culture</ion-label>
-      <ion-checkbox [(ngModel)]="culture"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="personalized_act.culture"(click)="personalAct()"></ion-checkbox>
     </ion-item>
 
     <ion-item>
       <ion-label>History</ion-label>
-      <ion-checkbox [(ngModel)]="history"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="personalized_act.history"(click)="personalAct()"></ion-checkbox>
     </ion-item>
   </ion-list>
 

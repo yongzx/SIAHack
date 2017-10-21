@@ -18,4 +18,3 @@ export class FeedbackPage {
     this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
 }
-

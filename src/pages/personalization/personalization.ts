@@ -14,8 +14,16 @@ import { VouchersPage } from '../vouchers/vouchers';
   templateUrl: 'personalization.html'
 })
 export class PersonalizationPage {
+  personalized_act = {};
   anotherPage = VouchersPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+
+  personalAct() {
+    console.log(this.personalized_act);
+  }
+
+
+
 
 }
