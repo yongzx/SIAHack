@@ -1,35 +1,82 @@
 page-about {
-
-}
-
-.input-label{
-    padding : 5px;
-    margin: 20px;
-    font-size: 20px;
-    text-align: left;
-}
-
-.selectionBox{
-    text-align: left;
-}
-
-.form{
-    display: block;
-    padding: 10px;
-}
-
-.selectionBox{
-    padding : 10px;
-    margin: 10px;
-}
-
-ion-slide.swiper-slide {
-    align-items: flex-start;
-}
-
-
-textarea {
-    max-width: 100%;
-    width: 100%;
-    height: 60vh;
-}
+    
+    }
+    
+    h1 {
+      padding-top: 10px;
+    }
+    
+    .input-label{
+        padding : 5px;
+        margin: 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    .selectionBox{
+        text-align: left;
+    }
+    
+    .form{
+        display: block;
+        padding: 10px;
+    }
+    
+    .selectionBox{
+        padding : 10px;
+        margin: 10px;
+    }
+    
+    ion-slide.swiper-slide {
+        align-items: flex-start;
+    }
+    
+    ion-card {
+      padding: 0px;
+    }
+    
+    #mMiles {
+      padding-bottom: 20px !important;
+    }
+    
+    #logo {
+      max-width: 70% !important;
+      display: block !important;
+      margin: 0 auto !important;
+    
+    }
+    
+    #miles {
+      background-color: rgba(0,0,0,0.1);
+      margin: 0;
+      padding: 8px;
+      max-width: 100%;
+    }
+    
+    .swiper-pagination {
+      padding-top: 20px;
+      bottom: 0 !important;
+    }
+    
+    ion-select{
+      background-color: rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
+    }
+    
+    #formSubmit{
+      margin: 0 auto !important;
+    }
+    
+    .slide-zoom{
+      height: 500px;
+    }
+    
+    #other{
+      height: 400px;
+    }
+    
+    #aother{
+      height: 400px;
+    }
+    

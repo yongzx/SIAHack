@@ -14,10 +14,15 @@ export class VouchersPage {
 
   preferences: object;
   data: object;
+  passPrice: number;
+  storedPrice: number;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public shareService: ShareService, public http:Http) {
     this.preferences = this.shareService.getPreferences();
     this.data = {};
+    this.passPrice = 0;
+    this.storedPrice = this.shareService.getPrice();
   }
 
   toggle(){
@@ -33,7 +38,6 @@ export class VouchersPage {
      this.http.get('https://apim.expedia.com/x/activities/search?location=Singapore',{headers: headers})
          .map(res => res.json())
          .subscribe(data => {
-           console.log(data);
            this.data = data;
            console.log(this.data);
          });
@@ -41,6 +45,11 @@ export class VouchersPage {
        }
     
   pushpage(){
+    var strPrice = "47";
+    var price = +strPrice;
+    this.passPrice = price;
+    this.shareService.setPrice(this.passPrice);
+    console.log(this.shareService.getPrice());
     this.navCtrl.push(PaymentPage);
 }
 }

@@ -5,12 +5,12 @@ export class ShareService {
 
     krisFlyerMilesCollected: number;
     preferences: object;
-    price: string;
+    price: number;
 
     constructor() {
         this.krisFlyerMilesCollected = 0;
         this.preferences = {};
-        this.price = "";
+        this.price = 0;
     }
 
     addMiles(miles) {

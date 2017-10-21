@@ -1,73 +1,76 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-        E - Tickets  [Budget: ${{preferences.budget}}]
+      E - Tickets [Budget: ${{preferences.budget - storedPrice}}]
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<div class="bar bar-header bar-light">
-  <h1 class="title">Budget: ${{preferences.budget}}</h1>
-</div>
 
-  <ion-content>
-    <ion-list>
-      <ion-item *ngFor="let activity of data.activities">
-        <ion-card>
-          <img src="{{activity.imageUrl}}"/>
-            <ion-card-content>
-              <ion-card-title text-wrap>
-                {{activity.title}}
-              </ion-card-title>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let activity of data.activities">
+      <ion-card>
+        <img src="{{activity.imageUrl}}" />
+        <ion-card-content>
+          <ion-card-title text-wrap>
+            {{activity.title}}
+          </ion-card-title>
 
 
-              <ion-grid>
-                <ion-row>
-                  <ion-col col-8>
-                    <button ion-button icon-left clear small>
-                      <ion-icon name="camera"></ion-icon>
-                      <div><a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a></div>
-                    </button>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-8>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="camera"></ion-icon>
+                  <div>
+                    <a href="https://www.youtube.com/watch?v=7Tp8g7AlwLI" target="_system">Watch a Snapshot</a>
+                  </div>
+                </button>
 
-                  </ion-col>
+              </ion-col>
 
-                  <ion-col col-4>
-                  	<button ion-button icon-left clear small>
-                      <ion-icon name="map"></ion-icon>
-                      <div><a href = "https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2" arget="_system">Maps</a></div>
-                    </button>
+              <ion-col col-4>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="map"></ion-icon>
+                  <div>
+                    <a href="https://www.google.com/maps/dir/Raffles+Hotel+Singapore/Jurong+Bird+Park+Singapore/@1.3065436,103.7452073,13z/data=!3m2!4b1!5s0x31da190b4c7c2e15:0x7a6a12c763ec149d!4m14!4m13!1m5!1m1!1s0x31da19a5ced1eead:0x612460f2cd532a89!2m2!1d103.854012!2d1.2945685!1m5!1m1!1s0x31da055d47e25239:0x8a03a32b70be1d4c!2m2!1d103.7064417!2d1.3187065!3e2"
+                      arget="_system">Maps</a>
+                  </div>
+                </button>
 
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
-                <ion-grid>
-                  <ion-row>
-                    <ion-col col-8>
-                      <button ion-button icon-left clear small>
-                        <ion-icon name="calendar"></ion-icon>
-                        <div>Add to Calendar</div>
-                      </button>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-8>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="calendar"></ion-icon>
+                  <div>Add to Calendar</div>
+                </button>
 
-                    </ion-col>
+              </ion-col>
 
-                    <ion-col col-4>
+              <ion-col col-4>
 
-                      <button ion-button icon-left clear small (click)="pushpage()">
-                        <ion-icon name="cash"></ion-icon>
-                        <div><s>{{activity.fromOriginalPrice}}</s> {{activity.fromPrice}}</div>
-                      </button>
-
-
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-
-                </ion-card-content>
-                </ion-card>
+                <button ion-button icon-left clear small (click)="pushpage()">
+                  <ion-icon name="cash"></ion-icon>
+                  <div>
+                    <s>{{activity.fromOriginalPrice}}</s> {{activity.fromPrice}}</div>
+                </button>
 
 
-      </ion-item>
-    </ion-list>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-item>
+  </ion-list>
 
 </ion-content>

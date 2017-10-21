@@ -13,8 +13,7 @@ page-home {
 }
 
 img{ 
-	margin-left: 0px !important; 
-	margin-right: 0px !important;
+	margin: 0 auto !important; 
 	width: 200% !important;
 	overflow: hidden;
 	height: 50vh !important;
@@ -32,9 +31,10 @@ img{
 }
 
 img{
+
     height: 100vh;
     width: 50vh;
-    margin: auto;
+    margin: 0, auto;
     display: block;
 }
 
@@ -100,11 +100,12 @@ h3 {
   right: 0;
 }
 
-.button{ 
-	width: 60%;
-	margin: 20%;
+#myButton{ 
+	width: 60% !important;
+	margin: 0 auto !important;
 }
 
-button{
-  float:center;
-}
+//button{
+//  margin: 0 auto;
+//  float:center;
+//}

@@ -5,13 +5,13 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="../assets/home.gif" alt="your image" style="width:50%;height:40%;" align="middle">
+  <img src="assets/home.gif" alt="your image" style="width:50%;height:40%;" align="middle">
   <div class="title">
     <h2 class="titleText">Get started on your adventure</h2>
   </div>
 
   <!-- INSERT QR CODE HERE -->
-  <button class="button" style="width: 200px" ion-button full icon-left (click)="scanCode()">
+  <button id="myButton" style="width: 200px" ion-button full icon-left (click)="scanCode()">
     <ion-icon name="qr-scanner"></ion-icon>Scan Tickets</button>
 
   <ion-card *ngIf="scannedCode">

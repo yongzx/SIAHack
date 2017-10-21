@@ -1,56 +1,60 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Feedback
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <form (ngSubmit)="logForm()">
-    <ion-slides pager>
-      <ion-slide>
-        <ion-card>
-          <h1>Miles Accrue:</h1>
-          <h2>{{miles}}</h2>
-          <button ion-button type = "Submit">Refresh</button>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <label class="item item-input item-select">
-          <div class="input-label">
-            Are you satisfied with the Stopover holidays?
-          </div>
-
-          <ion-select [(ngModel)]="feedback.satisfaction" name="satisfaction">
-            <ion-option value="happy" selected>Happy</ion-option>
-            <ion-option value="average">Average</ion-option>
-            <ion-option value="negative">Unhappy</ion-option>
-          </ion-select>
-        </label>
-
-        <label class="item item-input item-select">
-          <div class="input-label">
-            What do you think about our services?
-          </div>
-
-          <ion-select [(ngModel)]="feedback.service" name="service">
-            <ion-option value="good" selected>Good</ion-option>
-            <ion-option value="bad">Needs Improvement</ion-option>
-          </ion-select>
-        </label>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-item class="form">
-          <ion-label>Others</ion-label>
-          <ion-textarea [(ngModel)]="feedback.others" name="others"></ion-textarea>
-        </ion-item>
-        <button ion-button type="submit" block>Submit</button>
-      </ion-slide>
-
-    </ion-slides>
-  </form>
-
-</ion-content>
+    <ion-navbar>
+      <ion-title>
+        Feedback
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form (ngSubmit)="logForm()">
+      <ion-slides pager>
+        <ion-slide>
+          <ion-card>
+            <h1> Fill out this Feedback form and get KisFlyer Miles! </h1>
+            <img id="logo" src="assets/icon/oLogo.jpg">
+          </ion-card>
+          <ion-card id="miles">
+            <h2>Miles Accrued:</h2>
+            <h3 id="mMiles">{{miles}}</h3>
+            <button ion-button type = "Submit">Refresh</button>
+          </ion-card>
+        </ion-slide>
+  
+        <ion-slide>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Have you enjoyed your Stopover Holiday?
+            </div>
+  
+            <ion-select [(ngModel)]="feedback.satisfaction" name="satisfaction">
+              <ion-option value="happy" selected>YES!</ion-option>
+              <ion-option value="average">Ok lah</ion-option>
+              <ion-option value="negative">No</ion-option>
+            </ion-select>
+          </label>
+  
+          <label class="item item-input item-select">
+            <div class="input-label">
+              What do you think about our services?
+            </div>
+  
+            <ion-select [(ngModel)]="feedback.service" name="service">
+              <ion-option value="good" selected>Good</ion-option>
+              <ion-option value="bad">Needs Improvement</ion-option>
+            </ion-select>
+          </label>
+        </ion-slide>
+  
+        <ion-slide>
+          <ion-item  id="other" class="form">
+            <ion-label>Anything else?</ion-label>
+            <ion-textarea id="aother" [(ngModel)]="feedback.others" name="others"></ion-textarea>
+          </ion-item>
+          <button id="formSubmit" ion-button type="submit" block>Submit</button>
+        </ion-slide>
+  
+      </ion-slides>
+    </form>
+  
+  </ion-content>
