@@ -1,26 +1,24 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# SQXP - Personalized Social App for Singapore Stopover Holidays 
 
-## How to use this template
+This hybrid mobile app is built by Ionic framework during Singapore International Airlines AppChallenge 2017. 
+This app won the Open Category Grand Prizes for the preliminary round in San Francisco as well as for the final round in Singapore. 
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Summary
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+The mobile app serves 5 functions that makes the Singapore Stopover Holidays experience more enjoyable, personalized and social:
+1. The user receives the digital welcome package by scanning his/her boarding pass. The user can also check the status for his/her next flight.
+![Home](images/home.png)
+![Scanned Ticket](images/scanned_ticket.png)
 
-### With the Ionic CLI:
+2. The mobile app assess the user's budget, interests and layover time to suggest activities during the Stopover Holiday for the user.
+![Tickets](images/personalization.png)
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+3. The mobile app autogenerates the itinerary or the schedule for the user and provides in-app naviation.
+![Itinerary](images/itinerary.png)
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
+4. The mobile app provides location-based challenges and enables the users to share their experiences on the Instagram.
+![Challenges](images/challenges.png)
 
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+5. The user can provide feedback easily to Singapore International Airlines about his/her stopover holidays experience and gain KrisFlyer mileage.
+![Feedback](images/feedback.png)
+![KrisFlyer](images/krisflyer.png)
