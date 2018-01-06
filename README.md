@@ -1,4 +1,4 @@
-# SQXP - Personalized Social App for Singapore Stopover Holidays 
+<h1> SQXP - Personalized Social App for Singapore Stopover Holidays </h1>
 
 This hybrid mobile app is built by Ionic framework during Singapore International Airlines AppChallenge 2017. 
 This app won the Open Category Grand Prizes for the preliminary round in San Francisco as well as for the final round in Singapore. 
@@ -7,8 +7,8 @@ This app won the Open Category Grand Prizes for the preliminary round in San Fra
 
 The mobile app serves 5 functions that makes the Singapore Stopover Holidays experience more enjoyable, personalized and social:
 1. The user receives the digital welcome package by scanning his/her boarding pass. The user can also check the status for his/her next flight.
-![Home](images/home.png)
-![Scanned Ticket](images/scanned_ticket.png)
+<img src="images/home.png" width="256" height="256" title="Home">
+<img src="images/scanned_ticket.png" width="256" height="256" title="Scanned Ticket">
 
 2. The mobile app assess the user's budget, interests and layover time to suggest activities during the Stopover Holiday for the user.
 ![Tickets](images/personalization.png)
